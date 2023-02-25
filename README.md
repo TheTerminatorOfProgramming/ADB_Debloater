@@ -1,1 +1,1 @@
-# EasyADBControl
+# ADB Debloater
