@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADB Debloater", "ADB Debloater\ADB Debloater.csproj", "{078BED92-5D96-49F7-B06A-B0A9D78750F0}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ADB Debloater Setup", "ADB Debloater Setup\ADB Debloater Setup.vdproj", "{80120AEE-BEF2-40CB-BB80-E880FC4D9BB0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{078BED92-5D96-49F7-B06A-B0A9D78750F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{078BED92-5D96-49F7-B06A-B0A9D78750F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{078BED92-5D96-49F7-B06A-B0A9D78750F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{078BED92-5D96-49F7-B06A-B0A9D78750F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80120AEE-BEF2-40CB-BB80-E880FC4D9BB0}.Debug|Any CPU.ActiveCfg = Debug
+		{80120AEE-BEF2-40CB-BB80-E880FC4D9BB0}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {62DBA865-3124-4781-966F-98FB4ED1113D}
+	EndGlobalSection
+EndGlobal

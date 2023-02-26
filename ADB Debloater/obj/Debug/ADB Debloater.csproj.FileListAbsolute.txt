@@ -1,0 +1,71 @@
+C:\Users\Jesse\Documents\Visual Studio 2019\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB Debloater.csprojAssemblyReference.cache
+C:\Users\Jesse\Documents\Visual Studio 2019\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmMain.resources
+C:\Users\Jesse\Documents\Visual Studio 2019\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.Properties.Resources.resources
+C:\Users\Jesse\Documents\Visual Studio 2019\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB Debloater.csproj.GenerateResource.cache
+C:\Users\Jesse\Documents\Visual Studio 2019\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB Debloater.csproj.CoreCompileInputs.cache
+C:\Users\Jesse\Documents\Visual Studio 2019\Projects\ADB Debloater\ADB Debloater\bin\Debug\ADB Debloater.exe.config
+C:\Users\Jesse\Documents\Visual Studio 2019\Projects\ADB Debloater\ADB Debloater\bin\Debug\ADB Debloater.exe
+C:\Users\Jesse\Documents\Visual Studio 2019\Projects\ADB Debloater\ADB Debloater\bin\Debug\ADB Debloater.pdb
+C:\Users\Jesse\Documents\Visual Studio 2019\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB Debloater.exe
+C:\Users\Jesse\Documents\Visual Studio 2019\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB Debloater.pdb
+C:\Users\Jesse\Documents\Visual Studio 2019\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmAbout.resources
+C:\Users\Jesse\Documents\Visual Studio 2019\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmOptions.resources
+C:\Users\Jesse\Documents\Visual Studio 2019\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmDeviceInfo.resources
+C:\Users\Jesse\Documents\Visual Studio 2019\Projects\ADB Debloater\ADB Debloater\bin\Debug\MetroFramework.dll
+C:\Users\Jesse\Documents\Visual Studio 2019\Projects\ADB Debloater\ADB Debloater\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Jesse\Documents\Visual Studio 2019\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB Debloater.csproj.CopyComplete
+C:\Users\Jesse\Documents\Visual Studio 2019\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmConnectWirelessDebug.resources
+C:\Users\Jesse\Documents\Visual Studio 2019\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmCreateScript.resources
+C:\Users\Jesse\Documents\Visual Studio 2019\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmSelectPackages.resources
+C:\Users\Jesse\Documents\Visual Studio 2019\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmListConfirm.resources
+C:\Users\Jesse\Documents\Visual Studio 2019\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmStorage.resources
+C:\Users\Jesse\Documents\Visual Studio 2019\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmRestartManager.resources
+C:\Users\Jesse\Documents\Visual Studio 2019\Projects\ADB Debloater\ADB Debloater\bin\Debug\OSVersionExt.dll
+C:\Users\Jesse\Documents\Visual Studio 2022\Projects\ADB Debloater\ADB Debloater\bin\Debug\ADB Debloater.exe.config
+C:\Users\Jesse\Documents\Visual Studio 2022\Projects\ADB Debloater\ADB Debloater\bin\Debug\ADB Debloater.exe
+C:\Users\Jesse\Documents\Visual Studio 2022\Projects\ADB Debloater\ADB Debloater\bin\Debug\ADB Debloater.pdb
+C:\Users\Jesse\Documents\Visual Studio 2022\Projects\ADB Debloater\ADB Debloater\bin\Debug\MetroFramework.dll
+C:\Users\Jesse\Documents\Visual Studio 2022\Projects\ADB Debloater\ADB Debloater\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Jesse\Documents\Visual Studio 2022\Projects\ADB Debloater\ADB Debloater\bin\Debug\OSVersionExt.dll
+C:\Users\Jesse\Documents\Visual Studio 2022\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB Debloater.csproj.AssemblyReference.cache
+C:\Users\Jesse\Documents\Visual Studio 2022\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB Debloater.csproj.SuggestedBindingRedirects.cache
+C:\Users\Jesse\Documents\Visual Studio 2022\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmAbout.resources
+C:\Users\Jesse\Documents\Visual Studio 2022\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmConnectWirelessDebug.resources
+C:\Users\Jesse\Documents\Visual Studio 2022\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmCreateScript.resources
+C:\Users\Jesse\Documents\Visual Studio 2022\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmListConfirm.resources
+C:\Users\Jesse\Documents\Visual Studio 2022\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmMain.resources
+C:\Users\Jesse\Documents\Visual Studio 2022\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmOptions.resources
+C:\Users\Jesse\Documents\Visual Studio 2022\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmDeviceInfo.resources
+C:\Users\Jesse\Documents\Visual Studio 2022\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmRestartManager.resources
+C:\Users\Jesse\Documents\Visual Studio 2022\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmSelectPackages.resources
+C:\Users\Jesse\Documents\Visual Studio 2022\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmStorage.resources
+C:\Users\Jesse\Documents\Visual Studio 2022\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.Properties.Resources.resources
+C:\Users\Jesse\Documents\Visual Studio 2022\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB Debloater.csproj.GenerateResource.cache
+C:\Users\Jesse\Documents\Visual Studio 2022\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB Debloater.csproj.CoreCompileInputs.cache
+C:\Users\Jesse\Documents\Visual Studio 2022\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB Debloater.csproj.CopyComplete
+C:\Users\Jesse\Documents\Visual Studio 2022\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB Debloater.exe
+C:\Users\Jesse\Documents\Visual Studio 2022\Projects\ADB Debloater\ADB Debloater\obj\Debug\ADB Debloater.pdb
+C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\bin\Debug\ADB Debloater.exe.config
+C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\bin\Debug\ADB Debloater.exe
+C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\bin\Debug\ADB Debloater.pdb
+C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\bin\Debug\MetroFramework.dll
+C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\bin\Debug\OSVersionExt.dll
+C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\obj\Debug\ADB Debloater.csproj.AssemblyReference.cache
+C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\obj\Debug\ADB Debloater.csproj.SuggestedBindingRedirects.cache
+C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmAbout.resources
+C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmConnectWirelessDebug.resources
+C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmCreateScript.resources
+C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmListConfirm.resources
+C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmMain.resources
+C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmOptions.resources
+C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmDeviceInfo.resources
+C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmRestartManager.resources
+C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmSelectPackages.resources
+C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmStorage.resources
+C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\obj\Debug\ADB_Debloater.Properties.Resources.resources
+C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\obj\Debug\ADB Debloater.csproj.GenerateResource.cache
+C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\obj\Debug\ADB Debloater.csproj.CoreCompileInputs.cache
+C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\obj\Debug\ADB Debloater.csproj.CopyComplete
+C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\obj\Debug\ADB Debloater.exe
+C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\obj\Debug\ADB Debloater.pdb
