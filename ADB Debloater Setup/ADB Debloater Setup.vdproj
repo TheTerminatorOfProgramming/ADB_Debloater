@@ -33,12 +33,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_508798B6F9AF457B89FF1162ECE83D57"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_5369BBB30B2242CAB241F860580B6FB7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -70,12 +64,24 @@
         "Entry"
         {
         "MsmKey" = "8:_5E3AD5BCB3E04DBADA9F93244D8217C3"
-        "OwnerKey" = "8:_508798B6F9AF457B89FF1162ECE83D57"
+        "OwnerKey" = "8:_F3EA2E890978406AB9924230BC3B05F7"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5E3AD5BCB3E04DBADA9F93244D8217C3"
+        "OwnerKey" = "8:_79E993366D304B3593DF8DDE7F1B533A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_6E24B33E62CF45D0B8FC9D975B859037"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_79E993366D304B3593DF8DDE7F1B533A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -117,12 +123,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_D28C37C1F3FC4DD09C982EF8D426A76D"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_D70FCE6C814F43C88E8DB48A42CD3123"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -135,8 +135,8 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_E59A6049E3724B1A9A17B958618CB6F4"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_E5EFBC58E70481DCAB40BFADF3EEB667"
+        "OwnerKey" = "8:_F3EA2E890978406AB9924230BC3B05F7"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -147,20 +147,26 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_E59A6049E3724B1A9A17B958618CB6F4"
+        "MsmKey" = "8:_F3EA2E890978406AB9924230BC3B05F7"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D28C37C1F3FC4DD09C982EF8D426A76D"
+        "OwnerKey" = "8:_F3EA2E890978406AB9924230BC3B05F7"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_508798B6F9AF457B89FF1162ECE83D57"
+        "OwnerKey" = "8:_79E993366D304B3593DF8DDE7F1B533A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_E5EFBC58E70481DCAB40BFADF3EEB667"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -310,37 +316,6 @@
             "TargetName" = "8:libwinpthread-1.dll"
             "Tag" = "8:"
             "Folder" = "8:_D0129F1495194B259CA3BA737296F306"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_508798B6F9AF457B89FF1162ECE83D57"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_508798B6F9AF457B89FF1162ECE83D57"
-                    {
-                    "Name" = "8:MetroFramework.Fonts.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\MetroFramework.Fonts.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_E6CE9C5DA77843189E92181554B4B9F2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -506,6 +481,37 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_79E993366D304B3593DF8DDE7F1B533A"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_79E993366D304B3593DF8DDE7F1B533A"
+                    {
+                    "Name" = "8:MetroFramework.Fonts.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\..\\..\\..\\Desktop\\New folder (3)\\MetroFramework.Fonts.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_E6CE9C5DA77843189E92181554B4B9F2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A003769198614E049C426BBF6169D282"
             {
             "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\Tools\\ADB\\dmtracedump.exe"
@@ -626,37 +632,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D28C37C1F3FC4DD09C982EF8D426A76D"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_D28C37C1F3FC4DD09C982EF8D426A76D"
-                    {
-                    "Name" = "8:MetroFramework.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\MetroFramework.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_E6CE9C5DA77843189E92181554B4B9F2"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D70FCE6C814F43C88E8DB48A42CD3123"
             {
             "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\Tools\\ADB\\hprof-conv.exe"
@@ -697,21 +672,41 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E59A6049E3724B1A9A17B958618CB6F4"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E5EFBC58E70481DCAB40BFADF3EEB667"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:OSVersionExt, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_E59A6049E3724B1A9A17B958618CB6F4"
+                    "_E5EFBC58E70481DCAB40BFADF3EEB667"
                     {
                     "Name" = "8:OSVersionExt.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\OSVersionExt.dll"
+            "SourcePath" = "8:OSVersionExt.dll"
             "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_E6CE9C5DA77843189E92181554B4B9F2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EC0A4B3D0B5D49F8982B980D8414D0F7"
+            {
+            "SourcePath" = "8:..\\ADB Debloater\\icon.ico"
+            "TargetName" = "8:icon.ico"
             "Tag" = "8:"
             "Folder" = "8:_E6CE9C5DA77843189E92181554B4B9F2"
             "Condition" = "8:"
@@ -728,10 +723,21 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EC0A4B3D0B5D49F8982B980D8414D0F7"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F3EA2E890978406AB9924230BC3B05F7"
             {
-            "SourcePath" = "8:..\\ADB Debloater\\icon.ico"
-            "TargetName" = "8:icon.ico"
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:ADB Debloater, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_F3EA2E890978406AB9924230BC3B05F7"
+                    {
+                    "Name" = "8:ADB Debloater.exe"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\..\\..\\..\\Desktop\\New folder (3)\\ADB Debloater.exe"
+            "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_E6CE9C5DA77843189E92181554B4B9F2"
             "Condition" = "8:"
@@ -881,15 +887,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ADB Debloater Setup"
-        "ProductCode" = "8:{21B938BE-43D3-41D8-B9C3-BD3A6705F0EE}"
-        "PackageCode" = "8:{EA0C86F4-B97D-4D0C-8B14-034D53924AAE}"
+        "ProductCode" = "8:{E472FF93-A027-440F-BFC9-5DB8D3555EAC}"
+        "PackageCode" = "8:{552CDA31-1372-440A-B340-5D6F7387AA22}"
         "UpgradeCode" = "8:{572AE56C-E8ED-4D2E-98C3-02AC0FC4E516}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.2.0.0"
+        "ProductVersion" = "8:1.2.0"
         "Manufacturer" = "8:TTOP"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -1002,7 +1008,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_C9BD386FAE3245388D2F7A6466115975"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_13F0F81333934F4592BB6CD0CFFF0336"
             {
             "Name" = "8:ADB Debloater.exe"
             "Arguments" = "8:"
@@ -1010,7 +1016,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:"
+            "Target" = "8:_F3EA2E890978406AB9924230BC3B05F7"
             "Folder" = "8:_96C0021621C248F4BF695977E1DA4D09"
             "WorkingFolder" = "8:_E6CE9C5DA77843189E92181554B4B9F2"
             "Icon" = "8:_EC0A4B3D0B5D49F8982B980D8414D0F7"
