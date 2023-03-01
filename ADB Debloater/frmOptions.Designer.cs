@@ -70,7 +70,7 @@
             this.lblTheme.Font = new System.Drawing.Font("Segoe UI", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTheme.Location = new System.Drawing.Point(12, 209);
             this.lblTheme.Name = "lblTheme";
-            this.lblTheme.Size = new System.Drawing.Size(56, 17);
+            this.lblTheme.Size = new System.Drawing.Size(45, 13);
             this.lblTheme.TabIndex = 23;
             this.lblTheme.Text = "Theme:";
             // 
@@ -171,6 +171,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmOptions";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmOptions_FormClosing);
             this.Load += new System.EventHandler(this.FrmOptions_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

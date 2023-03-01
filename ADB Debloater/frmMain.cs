@@ -327,7 +327,7 @@ namespace ADB_Debloater
 
         private void BtnImport_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofdImport = new OpenFileDialog();
+            System.Windows.Forms.OpenFileDialog ofdImport = new System.Windows.Forms.OpenFileDialog();
 
             ofdImport.InitialDirectory = Environment.SpecialFolder.Desktop.ToString();
             ofdImport.Filter = "ADB Config Files (*.acfg)|*.acfg";
@@ -360,7 +360,7 @@ namespace ADB_Debloater
 
         private void BtnInstallAPK_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofdAPK = new OpenFileDialog();
+            System.Windows.Forms.OpenFileDialog ofdAPK = new System.Windows.Forms.OpenFileDialog();
 
             ofdAPK.InitialDirectory = @"C:\Users\" + Environment.UserName + @"\Downloads";
             ofdAPK.Title = "Browse APK Files";
@@ -422,7 +422,7 @@ namespace ADB_Debloater
 
         private void BtnCreateScript_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
+            System.Windows.Forms.OpenFileDialog ofd = new System.Windows.Forms.OpenFileDialog();
 
             ofd.InitialDirectory = Environment.SpecialFolder.Desktop.ToString();
             ofd.Filter = "ADB Config Files (*.acfg)|*.acfg";
@@ -763,17 +763,24 @@ namespace ADB_Debloater
                         {
                             if (Properties.Settings.Default.Theme == 0)
                             {
-                                btnReloadDevice.Image = Properties.Resources.refresh_white;
+                                if (this.BackColor == Color.FromArgb(56, 56, 56))
+                                {
+                                    btnReloadDevice.Image = Properties.Resources.refresh_white;
+                                }
+                                else
+                                {
+                                    btnReloadDevice.Image = Properties.Resources.refresh_black;
+                                }
                             }
 
                             if (Properties.Settings.Default.Theme == 1)
                             {
-                                btnReloadDevice.Image = Properties.Resources.refresh_white;
+                                btnReloadDevice.Image = Properties.Resources.refresh_black;
                             }
                         }
                         else
                         {
-                            btnReloadDevice.Image = Properties.Resources.refresh_black;
+                            btnReloadDevice.Image = Properties.Resources.refresh_white;
                         }
                     }
                 }

@@ -69,3 +69,39 @@ C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\obj\Debug\ADB Debloater.cspro
 C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\obj\Debug\ADB Debloater.csproj.CopyComplete
 C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\obj\Debug\ADB Debloater.exe
 C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\obj\Debug\ADB Debloater.pdb
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\ADB Debloater.exe.config
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\ADB Debloater.exe
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\ADB Debloater.pdb
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\MetroFramework.dll
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\OSVersionExt.dll
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Debug\ADB Debloater.csproj.AssemblyReference.cache
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Debug\ADB Debloater.csproj.SuggestedBindingRedirects.cache
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmAbout.resources
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmConnectWirelessDebug.resources
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmCreateScript.resources
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmListConfirm.resources
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmMain.resources
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmOptions.resources
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmDeviceInfo.resources
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmRestartManager.resources
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmSelectPackages.resources
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Debug\ADB_Debloater.frmStorage.resources
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Debug\ADB_Debloater.Properties.Resources.resources
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Debug\ADB Debloater.csproj.GenerateResource.cache
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Debug\ADB Debloater.csproj.CoreCompileInputs.cache
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Debug\ADB Debloater.csproj.CopyComplete
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Debug\ADB Debloater.exe
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Debug\ADB Debloater.pdb
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\runtimes\win-x86\native\WebView2Loader.dll
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\runtimes\win-x64\native\WebView2Loader.dll
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\AutoUpdater.NET.dll
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\Microsoft.Web.WebView2.Core.dll
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\Microsoft.Web.WebView2.WinForms.dll
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\Microsoft.Web.WebView2.Wpf.dll
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\AutoUpdater.NET.pdb
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\AutoUpdater.NET.xml
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\Microsoft.Web.WebView2.Core.xml
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\Microsoft.Web.WebView2.WinForms.xml
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\Microsoft.Web.WebView2.Wpf.xml

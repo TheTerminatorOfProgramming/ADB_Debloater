@@ -23,9 +23,26 @@ namespace ADB_Debloater
 
         clsFunctions functions;
         private string Configs = Directory.GetCurrentDirectory() + "\\Config";
+        private string Theme = "";
+        private string NewTheme = "";
         private void FrmOptions_Load(object sender, EventArgs e)
         {
             functions = new clsFunctions();
+
+            if (Properties.Settings.Default.Theme == 0)
+            {
+                Theme = "Auto";
+            }
+
+            if (Properties.Settings.Default.Theme == 1)
+            {
+                Theme = "Light";
+            }
+
+            if (Properties.Settings.Default.Theme == 2)
+            {
+                Theme = "Dark";
+            }
 
             if (OSVersion.GetOSVersion().Version.Build >= 18362)
             {
@@ -165,9 +182,29 @@ namespace ADB_Debloater
             }
 
             Properties.Settings.Default.Save();
+        }
 
-            MessageBox.Show("Changes Will Take Effect the next time ADB Debloater is started");
+        private void frmOptions_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (Properties.Settings.Default.Theme == 0)
+            {
+                NewTheme = "Auto";
+            }
 
+            if (Properties.Settings.Default.Theme == 1)
+            {
+                NewTheme = "Light";
+            }
+
+            if (Properties.Settings.Default.Theme == 2)
+            {
+                NewTheme = "Dark";
+            }
+
+            if (NewTheme != Theme)
+            {
+                MessageBox.Show("Any Changes Will Take Effect the next time ADB Debloater is started");
+            }
         }
     }
 }
