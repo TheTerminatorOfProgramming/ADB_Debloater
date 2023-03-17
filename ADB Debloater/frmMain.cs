@@ -9,7 +9,9 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -151,6 +153,9 @@ namespace ADB_Debloater
                     }
                 }
             }
+
+            txtIP.Clear();
+            txtPort.Clear();
         }
 
         private void BtnDeviceInfo_Click(object sender, EventArgs e)
@@ -200,6 +205,7 @@ namespace ADB_Debloater
                 btnEnableDisable.Enabled = false;
                 btnUninstall.Enabled = false;
                 btnRefreshList.Enabled = false;
+                btnQuickGetIP.Enabled= false;
             }
             else
             {
@@ -218,6 +224,7 @@ namespace ADB_Debloater
                 btnEnableDisable.Enabled = true;
                 btnUninstall.Enabled = true;
                 btnRefreshList.Enabled = true;
+                btnQuickGetIP.Enabled = true;
 
                 functions.GetApps(apps);
                 dgvApps.ClearSelection();
@@ -241,6 +248,9 @@ namespace ADB_Debloater
                     cmbSearchCriteria.SelectedItem = filterField;
                 }
             }
+
+            txtIP.Enabled= true;
+            txtPort.Enabled= true;
         }
 
         private void BtnReloadDevice_Click(object sender, EventArgs e)
@@ -784,6 +794,118 @@ namespace ADB_Debloater
                         }
                     }
                 }
+            }
+        }
+
+        private void btnQuickConnectWlDebug_Click(object sender, EventArgs e)
+        {
+            if (functions.IsValidateIP(txtIP.Text))
+            {
+                string connectString = txtIP.Text + ":" + txtPort.Text;
+
+                functions.NewPairCommand(" connect " + connectString);
+
+                if (deviceSerial[cmbDevices.SelectedIndex].ToString() != "" && deviceSerial.Contains(deviceSerial[cmbDevices.SelectedIndex].ToString()))
+                {
+                    MessageBox.Show("Remove Device from USB Cable!");
+                    txtPort.Enabled = false;
+                    Properties.Settings.Default.WirelessConnected = true;
+                    Properties.Settings.Default.Save();
+                }
+            }else
+            {
+                MessageBox.Show("IP Address Not Valid");
+                txtIP.Clear();
+            }
+        }
+
+        private void txtIP_Leave(object sender, EventArgs e)
+        {
+            /*Regex regex = new Regex(@"\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b");
+            Match match = regex.Match(txtIP.Text);
+            if (match.Success == false)
+            {
+                txtIP.Text = approvedethernetip;
+            }
+            else
+            {
+                approvedethernetip = txtIP.Text;
+            }*/
+        }
+        private void btnInstallAPK_DragEnter(object sender, DragEventArgs e)
+        {
+            if (!e.Data.GetDataPresent(DataFormats.FileDrop)) return;
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+            foreach (var file in files)
+            {
+                var ext = Path.GetExtension(file);
+                if (ext.Equals(".apk", StringComparison.CurrentCultureIgnoreCase))
+                {
+                    e.Effect = DragDropEffects.Copy;
+                    return;
+                }
+            }
+        }
+
+        private void btnInstallAPK_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+            foreach (var file in files)
+            {
+                var ext = Path.GetExtension(file);
+                var path = Path.GetFullPath(file);
+                if (ext.Equals(".apk", StringComparison.CurrentCultureIgnoreCase)) {
+                    functions.InstallAPK(path);
+                    functions.GetApps(apps);
+                    dgvApps.ClearSelection();
+                }
+            }
+        }
+
+        private void btnCreateScript_DragEnter(object sender, DragEventArgs e)
+        {
+            if (!e.Data.GetDataPresent(DataFormats.FileDrop)) return;
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+            foreach (var file in files)
+            {
+                var ext = Path.GetExtension(file);
+                if (ext.Equals(".acfg", StringComparison.CurrentCultureIgnoreCase))
+                {
+                    e.Effect = DragDropEffects.Copy;
+                    return;
+                }
+            }
+        }
+
+        private void btnCreateScript_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+            foreach (var file in files)
+            {
+                var ext = Path.GetExtension(file);
+                var path = Path.GetFullPath(file);
+                var directory = Path.GetDirectoryName(file);
+                if (ext.Equals(".acfg", StringComparison.CurrentCultureIgnoreCase))
+                {
+                    frmCreateScript createScript = new frmCreateScript(path, directory);
+                    createScript.ShowDialog();
+                }
+            }
+        }
+
+        private void btnQuickGetIP_Click(object sender, EventArgs e)
+        {
+            functions.NewADBCommand(" shell ip addr show wlan0 | grep 'inet ' | cut -d' ' -f6|cut -d/ -f1", false, true);
+            txtIP .Text = functions.getOutput();
+
+            txtIP.Enabled = false;
+        }
+
+        private void txtIP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
             }
         }
     }

@@ -33,7 +33,7 @@
             this.btnCreate = new System.Windows.Forms.Button();
             this.dgvApps = new System.Windows.Forms.DataGridView();
             this.Package = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Type = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Action = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvApps)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,11 +66,12 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvApps.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvApps.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvApps.ColumnHeadersVisible = false;
             this.dgvApps.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Package,
-            this.Type});
+            this.Action});
             this.dgvApps.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dgvApps.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
+            this.dgvApps.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dgvApps.EnableHeadersVisualStyles = false;
             this.dgvApps.Location = new System.Drawing.Point(0, 0);
             this.dgvApps.MultiSelect = false;
@@ -93,26 +94,29 @@
             this.dgvApps.ShowRowErrors = false;
             this.dgvApps.Size = new System.Drawing.Size(485, 336);
             this.dgvApps.TabIndex = 14;
-            this.dgvApps.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvApps_CellContentClick);
+            this.dgvApps.SelectionChanged += new System.EventHandler(this.dgvApps_SelectionChanged_1);
             // 
             // Package
             // 
             this.Package.HeaderText = "Package";
             this.Package.MinimumWidth = 6;
             this.Package.Name = "Package";
+            this.Package.ReadOnly = true;
             this.Package.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Package.Width = 370;
             // 
-            // Type
+            // Action
             // 
-            this.Type.HeaderText = "Type";
-            this.Type.Items.AddRange(new object[] {
+            this.Action.AutoComplete = false;
+            this.Action.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Action.HeaderText = "Action";
+            this.Action.Items.AddRange(new object[] {
             "Enable",
             "Disable",
             "Uninstall"});
-            this.Type.MinimumWidth = 6;
-            this.Type.Name = "Type";
-            this.Type.Width = 115;
+            this.Action.MinimumWidth = 6;
+            this.Action.Name = "Action";
+            this.Action.Width = 95;
             // 
             // frmCreateScript
             // 
@@ -138,6 +142,6 @@
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.DataGridView dgvApps;
         private System.Windows.Forms.DataGridViewTextBoxColumn Package;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Type;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Action;
     }
 }

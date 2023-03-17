@@ -53,10 +53,10 @@ namespace ADB_Debloater
                     if (serial != "" && devices.Contains(serial))
                     {
                         MessageBox.Show("Remove Device from USB Cable!");
+                        Properties.Settings.Default.WirelessConnected = true;
+                        Properties.Settings.Default.Save();
+                        this.Close();
                     }
-                    Properties.Settings.Default.WirelessConnected = true;
-                    Properties.Settings.Default.Save();
-                    this.Close();
                 }
             }
         }

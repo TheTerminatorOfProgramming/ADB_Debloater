@@ -49,6 +49,8 @@ namespace ADB_Debloater
             {
                 dgvApps.Rows.Add(line, "Uninstall");
             }
+
+            dgvApps.ClearSelection();
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -95,9 +97,14 @@ namespace ADB_Debloater
             Close();
         }
 
-        private void DgvApps_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvApps_SelectionChanged(object sender, EventArgs e)
         {
+            dgvApps.ClearSelection();
+        }
 
+        private void dgvApps_SelectionChanged_1(object sender, EventArgs e)
+        {
+            dgvApps.ClearSelection();
         }
     }
 }

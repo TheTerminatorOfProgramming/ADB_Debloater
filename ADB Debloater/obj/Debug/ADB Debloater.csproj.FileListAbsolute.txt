@@ -93,15 +93,4 @@ C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Debug\ADB Debloa
 C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Debug\ADB Debloater.csproj.CopyComplete
 C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Debug\ADB Debloater.exe
 C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Debug\ADB Debloater.pdb
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\runtimes\win-x86\native\WebView2Loader.dll
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\runtimes\win-x64\native\WebView2Loader.dll
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\runtimes\win-arm64\native\WebView2Loader.dll
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\AutoUpdater.NET.dll
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\Microsoft.Web.WebView2.Core.dll
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\Microsoft.Web.WebView2.WinForms.dll
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\Microsoft.Web.WebView2.Wpf.dll
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\AutoUpdater.NET.pdb
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\AutoUpdater.NET.xml
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\Microsoft.Web.WebView2.Core.xml
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\Microsoft.Web.WebView2.WinForms.xml
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\Microsoft.Web.WebView2.Wpf.xml
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Debug\IPv4AddressTextBox.dll

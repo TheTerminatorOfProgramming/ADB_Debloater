@@ -46,6 +46,13 @@ namespace ADB_Debloater
             this.btnCreateScript = new System.Windows.Forms.Button();
             this.lblSelected = new System.Windows.Forms.Label();
             this.pnlDev = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtPort = new System.Windows.Forms.TextBox();
+            this.btnQuickGetIP = new System.Windows.Forms.Button();
+            this.txtIP = new System.Windows.Forms.TextBox();
+            this.btnQuickConnectWlDebug = new System.Windows.Forms.Button();
+            this.lblQuickConnectWlDebug = new System.Windows.Forms.Label();
             this.btnAbout = new System.Windows.Forms.Button();
             this.btnOptions = new System.Windows.Forms.Button();
             this.btnDeviceInfo = new System.Windows.Forms.Button();
@@ -148,6 +155,7 @@ namespace ADB_Debloater
             // 
             // btnInstallAPK
             // 
+            this.btnInstallAPK.AllowDrop = true;
             this.btnInstallAPK.Enabled = false;
             this.btnInstallAPK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInstallAPK.Font = new System.Drawing.Font("Segoe UI", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -158,6 +166,8 @@ namespace ADB_Debloater
             this.btnInstallAPK.Text = "Install APK";
             this.btnInstallAPK.UseVisualStyleBackColor = true;
             this.btnInstallAPK.Click += new System.EventHandler(this.BtnInstallAPK_Click);
+            this.btnInstallAPK.DragDrop += new System.Windows.Forms.DragEventHandler(this.btnInstallAPK_DragDrop);
+            this.btnInstallAPK.DragEnter += new System.Windows.Forms.DragEventHandler(this.btnInstallAPK_DragEnter);
             // 
             // btnImport
             // 
@@ -187,6 +197,7 @@ namespace ADB_Debloater
             // 
             // btnCreateScript
             // 
+            this.btnCreateScript.AllowDrop = true;
             this.btnCreateScript.Enabled = false;
             this.btnCreateScript.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateScript.Font = new System.Drawing.Font("Segoe UI", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -197,6 +208,8 @@ namespace ADB_Debloater
             this.btnCreateScript.Text = "Create ADB Script";
             this.btnCreateScript.UseVisualStyleBackColor = true;
             this.btnCreateScript.Click += new System.EventHandler(this.BtnCreateScript_Click);
+            this.btnCreateScript.DragDrop += new System.Windows.Forms.DragEventHandler(this.btnCreateScript_DragDrop);
+            this.btnCreateScript.DragEnter += new System.Windows.Forms.DragEventHandler(this.btnCreateScript_DragEnter);
             // 
             // lblSelected
             // 
@@ -210,6 +223,13 @@ namespace ADB_Debloater
             // pnlDev
             // 
             this.pnlDev.BackColor = System.Drawing.Color.Transparent;
+            this.pnlDev.Controls.Add(this.label2);
+            this.pnlDev.Controls.Add(this.label1);
+            this.pnlDev.Controls.Add(this.txtPort);
+            this.pnlDev.Controls.Add(this.btnQuickGetIP);
+            this.pnlDev.Controls.Add(this.txtIP);
+            this.pnlDev.Controls.Add(this.btnQuickConnectWlDebug);
+            this.pnlDev.Controls.Add(this.lblQuickConnectWlDebug);
             this.pnlDev.Controls.Add(this.btnAbout);
             this.pnlDev.Controls.Add(this.btnOptions);
             this.pnlDev.Controls.Add(this.btnDeviceInfo);
@@ -223,13 +243,87 @@ namespace ADB_Debloater
             this.pnlDev.Size = new System.Drawing.Size(954, 77);
             this.pnlDev.TabIndex = 27;
             // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(414, 56);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(82, 17);
+            this.label2.TabIndex = 59;
+            this.label2.Text = "Port Number";
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(311, 56);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 17);
+            this.label1.TabIndex = 58;
+            this.label1.Text = "IP Address";
+            // 
+            // txtPort
+            // 
+            this.txtPort.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPort.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPort.Location = new System.Drawing.Point(417, 28);
+            this.txtPort.MaxLength = 5;
+            this.txtPort.Name = "txtPort";
+            this.txtPort.Size = new System.Drawing.Size(40, 25);
+            this.txtPort.TabIndex = 57;
+            this.txtPort.Text = "99999";
+            // 
+            // btnQuickGetIP
+            // 
+            this.btnQuickGetIP.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuickGetIP.Location = new System.Drawing.Point(544, 28);
+            this.btnQuickGetIP.Name = "btnQuickGetIP";
+            this.btnQuickGetIP.Size = new System.Drawing.Size(95, 25);
+            this.btnQuickGetIP.TabIndex = 56;
+            this.btnQuickGetIP.Text = "Get Device IP";
+            this.btnQuickGetIP.UseVisualStyleBackColor = true;
+            this.btnQuickGetIP.Click += new System.EventHandler(this.btnQuickGetIP_Click);
+            // 
+            // txtIP
+            // 
+            this.txtIP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIP.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIP.Location = new System.Drawing.Point(311, 28);
+            this.txtIP.MaxLength = 15;
+            this.txtIP.Name = "txtIP";
+            this.txtIP.Size = new System.Drawing.Size(100, 25);
+            this.txtIP.TabIndex = 55;
+            this.txtIP.Text = "192.168.196.365";
+            this.txtIP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIP_KeyPress);
+            this.txtIP.Leave += new System.EventHandler(this.txtIP_Leave);
+            // 
+            // btnQuickConnectWlDebug
+            // 
+            this.btnQuickConnectWlDebug.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuickConnectWlDebug.Location = new System.Drawing.Point(463, 28);
+            this.btnQuickConnectWlDebug.Name = "btnQuickConnectWlDebug";
+            this.btnQuickConnectWlDebug.Size = new System.Drawing.Size(75, 25);
+            this.btnQuickConnectWlDebug.TabIndex = 54;
+            this.btnQuickConnectWlDebug.Text = "Connect";
+            this.btnQuickConnectWlDebug.UseVisualStyleBackColor = true;
+            this.btnQuickConnectWlDebug.Click += new System.EventHandler(this.btnQuickConnectWlDebug_Click);
+            // 
+            // lblQuickConnectWlDebug
+            // 
+            this.lblQuickConnectWlDebug.AutoSize = true;
+            this.lblQuickConnectWlDebug.Font = new System.Drawing.Font("Segoe UI", 11.78182F, System.Drawing.FontStyle.Bold);
+            this.lblQuickConnectWlDebug.Location = new System.Drawing.Point(310, 4);
+            this.lblQuickConnectWlDebug.Name = "lblQuickConnectWlDebug";
+            this.lblQuickConnectWlDebug.Size = new System.Drawing.Size(226, 21);
+            this.lblQuickConnectWlDebug.TabIndex = 52;
+            this.lblQuickConnectWlDebug.Text = "Quick Connect Wireless ADB";
+            // 
             // btnAbout
             // 
             this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAbout.Font = new System.Drawing.Font("Segoe UI", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbout.Location = new System.Drawing.Point(847, 26);
+            this.btnAbout.Location = new System.Drawing.Point(825, 6);
             this.btnAbout.Name = "btnAbout";
-            this.btnAbout.Size = new System.Drawing.Size(85, 29);
+            this.btnAbout.Size = new System.Drawing.Size(102, 29);
             this.btnAbout.TabIndex = 51;
             this.btnAbout.Text = "About";
             this.btnAbout.UseVisualStyleBackColor = true;
@@ -239,9 +333,9 @@ namespace ADB_Debloater
             // 
             this.btnOptions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOptions.Font = new System.Drawing.Font("Segoe UI", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOptions.Location = new System.Drawing.Point(744, 26);
+            this.btnOptions.Location = new System.Drawing.Point(825, 41);
             this.btnOptions.Name = "btnOptions";
-            this.btnOptions.Size = new System.Drawing.Size(85, 29);
+            this.btnOptions.Size = new System.Drawing.Size(102, 29);
             this.btnOptions.TabIndex = 50;
             this.btnOptions.Text = "Options";
             this.btnOptions.UseVisualStyleBackColor = true;
@@ -251,7 +345,7 @@ namespace ADB_Debloater
             // 
             this.btnDeviceInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeviceInfo.Font = new System.Drawing.Font("Segoe UI", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeviceInfo.Location = new System.Drawing.Point(624, 26);
+            this.btnDeviceInfo.Location = new System.Drawing.Point(681, 6);
             this.btnDeviceInfo.Name = "btnDeviceInfo";
             this.btnDeviceInfo.Size = new System.Drawing.Size(102, 29);
             this.btnDeviceInfo.TabIndex = 49;
@@ -297,11 +391,11 @@ namespace ADB_Debloater
             // 
             this.btnAdbWifi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdbWifi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnAdbWifi.Location = new System.Drawing.Point(346, 26);
+            this.btnAdbWifi.Location = new System.Drawing.Point(681, 41);
             this.btnAdbWifi.Name = "btnAdbWifi";
-            this.btnAdbWifi.Size = new System.Drawing.Size(156, 29);
+            this.btnAdbWifi.Size = new System.Drawing.Size(102, 29);
             this.btnAdbWifi.TabIndex = 44;
-            this.btnAdbWifi.Text = "Enable Wireless Debugging";
+            this.btnAdbWifi.Text = "Wireless Debug";
             this.btnAdbWifi.UseVisualStyleBackColor = true;
             this.btnAdbWifi.Click += new System.EventHandler(this.BtnAdbWifi_Click);
             // 
@@ -522,6 +616,13 @@ namespace ADB_Debloater
         private System.Windows.Forms.Button btnLookupPkgName;
         private System.Windows.Forms.Button btnRefreshList;
         private System.Windows.Forms.Button btnCopyPkgName;
+        private System.Windows.Forms.Button btnQuickConnectWlDebug;
+        private System.Windows.Forms.Label lblQuickConnectWlDebug;
+        private System.Windows.Forms.TextBox txtIP;
+        private System.Windows.Forms.Button btnQuickGetIP;
+        private System.Windows.Forms.TextBox txtPort;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
 

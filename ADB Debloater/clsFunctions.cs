@@ -449,8 +449,12 @@ namespace ADB_Debloater
 #endif
 
                         frmMain form = (frmMain)Application.OpenForms["frmMain"];
-                        form.deviceNames.Add(getOutput());
-                        form.deviceSerial.Add(temp[i].ToString());
+                        if (getOutput() != string.Empty || getOutput() != null)
+                        {
+                            form.deviceNames.Add(getOutput());
+                            form.deviceSerial.Add(temp[i].ToString());
+                        } 
+                      
                     }
                 }
             }
@@ -477,7 +481,7 @@ namespace ADB_Debloater
                         MetroFramework.Controls.MetroTile record = Application.OpenForms["frmDeviceInfo"].Controls.Find("mtRecord", true)[0] as MetroFramework.Controls.MetroTile;
                         MetroFramework.Controls.MetroTile remote = Application.OpenForms["frmDeviceInfo"].Controls.Find("mtRemote", true)[0] as MetroFramework.Controls.MetroTile;
                         Panel pnl = Application.OpenForms["frmDeviceInfo"].Controls.Find("pnlAPK", true)[0] as Panel;
-                        Button storage = Application.OpenForms["frmDeviceInfo"].Controls.Find("btnStorageDets", true)[0] as Button;
+                        Button storage = Application.OpenForms["frmDeviceInfo"].Controls.Find("btnStorageDets", true)[0] as Button;           
 
                         shutdown.Enabled = false;
                         reboot.Enabled = false;
@@ -488,6 +492,8 @@ namespace ADB_Debloater
                         pnl.Enabled = false;
 
                         storage.Visible = false;
+
+                        
                     }
                 }
             }
