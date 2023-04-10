@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JR.Utils.GUI.Forms;
+using System;
 using System.Collections;
 using System.IO;
 using System.Windows.Forms;
@@ -10,6 +11,7 @@ namespace ADB_Debloater
         ArrayList edited;
         ArrayList result;
         String DevName;
+        clsFunctions functions = new clsFunctions();
         public frmListConfirm(ArrayList list, String DeviceName)
         {
             InitializeComponent();
@@ -21,7 +23,8 @@ namespace ADB_Debloater
         {
             if (dgvApps.SelectedRows.Count > 0)
             {
-                if (MessageBox.Show("Confirm Removal of " + dgvApps.CurrentCell.Value, "Confirm Package Removal", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                FlexibleMessageBox.FONT = functions.setMessageBoxFont(Properties.Settings.Default.FontIndex);
+                if (FlexibleMessageBox.Show("Confirm Removal of " + dgvApps.CurrentCell.Value, "Confirm Package Removal", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     dgvApps.Rows.RemoveAt(dgvApps.CurrentCell.RowIndex);
                     result.RemoveAt(dgvApps.CurrentCell.RowIndex);
@@ -107,6 +110,13 @@ namespace ADB_Debloater
             controls.Add(dgvApps);
             clsFunctions functions = new clsFunctions();
             functions.SetTheme(this, controls);
+
+            ArrayList ctrls = new ArrayList
+            {
+                Controls
+            };
+
+            functions.setFont(this, Properties.Settings.Default.FontIndex, ctrls, null);
         }
 
         private void FrmListConfirm_FormClosing(object sender, FormClosingEventArgs e)

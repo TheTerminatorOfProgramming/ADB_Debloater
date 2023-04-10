@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JR.Utils.GUI.Forms;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -48,6 +49,13 @@ namespace ADB_Debloater
 
             functions.SetTheme(this, controls);
             GetDeviceInfo(Properties.Settings.Default.Serial);
+
+            ArrayList ctrls = new ArrayList
+            {
+                Controls
+            };
+
+            functions.setFont(this, Properties.Settings.Default.FontIndex, ctrls, null);
         }
 
         private void BtnStorageDets_Click(object sender, EventArgs e)
@@ -162,7 +170,8 @@ namespace ADB_Debloater
 
         private void MtShutdown_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are You Sure You Want To Power Off The Selected Device: " + device, "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            FlexibleMessageBox.FONT = functions.setMessageBoxFont(Properties.Settings.Default.FontIndex);
+            if (FlexibleMessageBox.Show("Are You Sure You Want To Power Off The Selected Device: " + device, "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 functions.NewADBCommand(" shell reboot -p", false, true);
                 functions.CloseAllForms();

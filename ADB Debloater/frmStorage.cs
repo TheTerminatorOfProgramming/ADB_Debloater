@@ -92,6 +92,13 @@ namespace ADB_Debloater
             ArrayList controls = new ArrayList();
             controls.Add(dgvStorage);
             functions.SetTheme(this, controls);
+
+            ArrayList ctrls = new ArrayList
+            {
+                Controls
+            };
+
+            functions.setFont(this, Properties.Settings.Default.FontIndex, ctrls, dgvStorage);
         }
 
         private void dgvStorage_SelectionChanged(object sender, EventArgs e)

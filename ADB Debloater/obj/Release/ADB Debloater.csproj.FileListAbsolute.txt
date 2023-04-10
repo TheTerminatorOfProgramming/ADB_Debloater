@@ -93,3 +93,4 @@ C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Release\ADB Debl
 C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Release\ADB Debloater.csproj.CopyComplete
 C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Release\ADB Debloater.exe
 C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Release\ADB Debloater.pdb
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Release\ADB_Debloater.frmCreateInstallScript.resources

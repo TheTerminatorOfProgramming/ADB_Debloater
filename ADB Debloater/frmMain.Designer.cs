@@ -31,10 +31,11 @@ namespace ADB_Debloater
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblPackageCount = new System.Windows.Forms.Label();
             this.pnlAppControls = new System.Windows.Forms.Panel();
+            this.btnCreateInstallScript = new System.Windows.Forms.Button();
             this.pnlAPK = new System.Windows.Forms.Panel();
             this.btnReinstall = new System.Windows.Forms.Button();
             this.cmbSearchCriteria = new System.Windows.Forms.ComboBox();
@@ -46,8 +47,8 @@ namespace ADB_Debloater
             this.btnCreateScript = new System.Windows.Forms.Button();
             this.lblSelected = new System.Windows.Forms.Label();
             this.pnlDev = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblQuickPort = new System.Windows.Forms.Label();
+            this.lblQuickIP = new System.Windows.Forms.Label();
             this.txtPort = new System.Windows.Forms.TextBox();
             this.btnQuickGetIP = new System.Windows.Forms.Button();
             this.txtIP = new System.Windows.Forms.TextBox();
@@ -78,7 +79,7 @@ namespace ADB_Debloater
             // lblPackageCount
             // 
             this.lblPackageCount.AutoSize = true;
-            this.lblPackageCount.Location = new System.Drawing.Point(686, 336);
+            this.lblPackageCount.Location = new System.Drawing.Point(686, 339);
             this.lblPackageCount.Name = "lblPackageCount";
             this.lblPackageCount.Size = new System.Drawing.Size(67, 13);
             this.lblPackageCount.TabIndex = 26;
@@ -86,12 +87,28 @@ namespace ADB_Debloater
             // 
             // pnlAppControls
             // 
+            this.pnlAppControls.Controls.Add(this.btnCreateInstallScript);
             this.pnlAppControls.Controls.Add(this.pnlAPK);
             this.pnlAppControls.Controls.Add(this.btnCreateScript);
             this.pnlAppControls.Location = new System.Drawing.Point(689, 78);
             this.pnlAppControls.Name = "pnlAppControls";
-            this.pnlAppControls.Size = new System.Drawing.Size(250, 243);
+            this.pnlAppControls.Size = new System.Drawing.Size(250, 250);
             this.pnlAppControls.TabIndex = 25;
+            // 
+            // btnCreateInstallScript
+            // 
+            this.btnCreateInstallScript.AllowDrop = true;
+            this.btnCreateInstallScript.Enabled = false;
+            this.btnCreateInstallScript.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreateInstallScript.Font = new System.Drawing.Font("Segoe UI", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateInstallScript.Location = new System.Drawing.Point(144, 208);
+            this.btnCreateInstallScript.Name = "btnCreateInstallScript";
+            this.btnCreateInstallScript.Size = new System.Drawing.Size(88, 38);
+            this.btnCreateInstallScript.TabIndex = 24;
+            this.btnCreateInstallScript.TabStop = false;
+            this.btnCreateInstallScript.Text = "Create ADB Install Script";
+            this.btnCreateInstallScript.UseVisualStyleBackColor = true;
+            this.btnCreateInstallScript.Click += new System.EventHandler(this.btnCreateInstallScript_Click);
             // 
             // pnlAPK
             // 
@@ -116,6 +133,7 @@ namespace ADB_Debloater
             this.btnReinstall.Name = "btnReinstall";
             this.btnReinstall.Size = new System.Drawing.Size(214, 29);
             this.btnReinstall.TabIndex = 29;
+            this.btnReinstall.TabStop = false;
             this.btnReinstall.Text = "Reinstall Package";
             this.btnReinstall.UseVisualStyleBackColor = true;
             this.btnReinstall.Click += new System.EventHandler(this.BtnReinstall_Click);
@@ -137,20 +155,23 @@ namespace ADB_Debloater
             // 
             this.lblSearch.AutoSize = true;
             this.lblSearch.Font = new System.Drawing.Font("Segoe UI", 11.78182F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.Location = new System.Drawing.Point(3, 6);
+            this.lblSearch.Location = new System.Drawing.Point(15, 14);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(65, 21);
+            this.lblSearch.Size = new System.Drawing.Size(65, 18);
             this.lblSearch.TabIndex = 28;
             this.lblSearch.Text = "Search:";
             // 
             // txtSearch
             // 
+            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearch.Enabled = false;
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.txtSearch.Location = new System.Drawing.Point(85, 7);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(157, 25);
             this.txtSearch.TabIndex = 27;
+            this.txtSearch.TabStop = false;
+            this.txtSearch.WordWrap = false;
             this.txtSearch.TextChanged += new System.EventHandler(this.TxtSearch_TextChanged);
             // 
             // btnInstallAPK
@@ -163,6 +184,7 @@ namespace ADB_Debloater
             this.btnInstallAPK.Name = "btnInstallAPK";
             this.btnInstallAPK.Size = new System.Drawing.Size(214, 29);
             this.btnInstallAPK.TabIndex = 26;
+            this.btnInstallAPK.TabStop = false;
             this.btnInstallAPK.Text = "Install APK";
             this.btnInstallAPK.UseVisualStyleBackColor = true;
             this.btnInstallAPK.Click += new System.EventHandler(this.BtnInstallAPK_Click);
@@ -178,6 +200,7 @@ namespace ADB_Debloater
             this.btnImport.Name = "btnImport";
             this.btnImport.Size = new System.Drawing.Size(100, 29);
             this.btnImport.TabIndex = 24;
+            this.btnImport.TabStop = false;
             this.btnImport.Text = "Import List";
             this.btnImport.UseVisualStyleBackColor = true;
             this.btnImport.Click += new System.EventHandler(this.BtnImport_Click);
@@ -191,6 +214,7 @@ namespace ADB_Debloater
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(95, 29);
             this.btnExport.TabIndex = 23;
+            this.btnExport.TabStop = false;
             this.btnExport.Text = "Export List";
             this.btnExport.UseVisualStyleBackColor = true;
             this.btnExport.Click += new System.EventHandler(this.BtnExport_Click);
@@ -201,10 +225,11 @@ namespace ADB_Debloater
             this.btnCreateScript.Enabled = false;
             this.btnCreateScript.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateScript.Font = new System.Drawing.Font("Segoe UI", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateScript.Location = new System.Drawing.Point(18, 209);
+            this.btnCreateScript.Location = new System.Drawing.Point(18, 208);
             this.btnCreateScript.Name = "btnCreateScript";
-            this.btnCreateScript.Size = new System.Drawing.Size(214, 29);
+            this.btnCreateScript.Size = new System.Drawing.Size(120, 38);
             this.btnCreateScript.TabIndex = 23;
+            this.btnCreateScript.TabStop = false;
             this.btnCreateScript.Text = "Create ADB Script";
             this.btnCreateScript.UseVisualStyleBackColor = true;
             this.btnCreateScript.Click += new System.EventHandler(this.BtnCreateScript_Click);
@@ -214,7 +239,7 @@ namespace ADB_Debloater
             // lblSelected
             // 
             this.lblSelected.AutoSize = true;
-            this.lblSelected.Location = new System.Drawing.Point(686, 365);
+            this.lblSelected.Location = new System.Drawing.Point(686, 368);
             this.lblSelected.Name = "lblSelected";
             this.lblSelected.Size = new System.Drawing.Size(61, 13);
             this.lblSelected.TabIndex = 24;
@@ -222,9 +247,9 @@ namespace ADB_Debloater
             // 
             // pnlDev
             // 
-            this.pnlDev.BackColor = System.Drawing.Color.Transparent;
-            this.pnlDev.Controls.Add(this.label2);
-            this.pnlDev.Controls.Add(this.label1);
+            this.pnlDev.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnlDev.Controls.Add(this.lblQuickPort);
+            this.pnlDev.Controls.Add(this.lblQuickIP);
             this.pnlDev.Controls.Add(this.txtPort);
             this.pnlDev.Controls.Add(this.btnQuickGetIP);
             this.pnlDev.Controls.Add(this.txtIP);
@@ -243,23 +268,23 @@ namespace ADB_Debloater
             this.pnlDev.Size = new System.Drawing.Size(954, 77);
             this.pnlDev.TabIndex = 27;
             // 
-            // label2
+            // lblQuickPort
             // 
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(414, 56);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 17);
-            this.label2.TabIndex = 59;
-            this.label2.Text = "Port Number";
+            this.lblQuickPort.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuickPort.Location = new System.Drawing.Point(414, 56);
+            this.lblQuickPort.Name = "lblQuickPort";
+            this.lblQuickPort.Size = new System.Drawing.Size(82, 17);
+            this.lblQuickPort.TabIndex = 59;
+            this.lblQuickPort.Text = "Port Number";
             // 
-            // label1
+            // lblQuickIP
             // 
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(311, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 17);
-            this.label1.TabIndex = 58;
-            this.label1.Text = "IP Address";
+            this.lblQuickIP.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuickIP.Location = new System.Drawing.Point(311, 56);
+            this.lblQuickIP.Name = "lblQuickIP";
+            this.lblQuickIP.Size = new System.Drawing.Size(68, 17);
+            this.lblQuickIP.TabIndex = 58;
+            this.lblQuickIP.Text = "IP Address";
             // 
             // txtPort
             // 
@@ -274,13 +299,17 @@ namespace ADB_Debloater
             // 
             // btnQuickGetIP
             // 
-            this.btnQuickGetIP.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuickGetIP.BackColor = System.Drawing.Color.Transparent;
+            this.btnQuickGetIP.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnQuickGetIP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuickGetIP.Font = new System.Drawing.Font("Segoe UI", 7.854546F);
             this.btnQuickGetIP.Location = new System.Drawing.Point(544, 28);
             this.btnQuickGetIP.Name = "btnQuickGetIP";
             this.btnQuickGetIP.Size = new System.Drawing.Size(95, 25);
             this.btnQuickGetIP.TabIndex = 56;
+            this.btnQuickGetIP.TabStop = false;
             this.btnQuickGetIP.Text = "Get Device IP";
-            this.btnQuickGetIP.UseVisualStyleBackColor = true;
+            this.btnQuickGetIP.UseVisualStyleBackColor = false;
             this.btnQuickGetIP.Click += new System.EventHandler(this.btnQuickGetIP_Click);
             // 
             // txtIP
@@ -298,13 +327,17 @@ namespace ADB_Debloater
             // 
             // btnQuickConnectWlDebug
             // 
+            this.btnQuickConnectWlDebug.BackColor = System.Drawing.Color.Transparent;
+            this.btnQuickConnectWlDebug.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnQuickConnectWlDebug.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuickConnectWlDebug.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuickConnectWlDebug.Location = new System.Drawing.Point(463, 28);
             this.btnQuickConnectWlDebug.Name = "btnQuickConnectWlDebug";
             this.btnQuickConnectWlDebug.Size = new System.Drawing.Size(75, 25);
             this.btnQuickConnectWlDebug.TabIndex = 54;
+            this.btnQuickConnectWlDebug.TabStop = false;
             this.btnQuickConnectWlDebug.Text = "Connect";
-            this.btnQuickConnectWlDebug.UseVisualStyleBackColor = true;
+            this.btnQuickConnectWlDebug.UseVisualStyleBackColor = false;
             this.btnQuickConnectWlDebug.Click += new System.EventHandler(this.btnQuickConnectWlDebug_Click);
             // 
             // lblQuickConnectWlDebug
@@ -313,44 +346,53 @@ namespace ADB_Debloater
             this.lblQuickConnectWlDebug.Font = new System.Drawing.Font("Segoe UI", 11.78182F, System.Drawing.FontStyle.Bold);
             this.lblQuickConnectWlDebug.Location = new System.Drawing.Point(310, 4);
             this.lblQuickConnectWlDebug.Name = "lblQuickConnectWlDebug";
-            this.lblQuickConnectWlDebug.Size = new System.Drawing.Size(226, 21);
+            this.lblQuickConnectWlDebug.Size = new System.Drawing.Size(229, 18);
             this.lblQuickConnectWlDebug.TabIndex = 52;
             this.lblQuickConnectWlDebug.Text = "Quick Connect Wireless ADB";
             // 
             // btnAbout
             // 
+            this.btnAbout.BackColor = System.Drawing.Color.Transparent;
+            this.btnAbout.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAbout.Font = new System.Drawing.Font("Segoe UI", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbout.Font = new System.Drawing.Font("Segoe UI", 7.854546F);
             this.btnAbout.Location = new System.Drawing.Point(825, 6);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(102, 29);
             this.btnAbout.TabIndex = 51;
+            this.btnAbout.TabStop = false;
             this.btnAbout.Text = "About";
-            this.btnAbout.UseVisualStyleBackColor = true;
+            this.btnAbout.UseVisualStyleBackColor = false;
             this.btnAbout.Click += new System.EventHandler(this.BtnAbout_Click);
             // 
             // btnOptions
             // 
+            this.btnOptions.BackColor = System.Drawing.Color.Transparent;
+            this.btnOptions.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnOptions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOptions.Font = new System.Drawing.Font("Segoe UI", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOptions.Font = new System.Drawing.Font("Segoe UI", 7.854546F);
             this.btnOptions.Location = new System.Drawing.Point(825, 41);
             this.btnOptions.Name = "btnOptions";
             this.btnOptions.Size = new System.Drawing.Size(102, 29);
             this.btnOptions.TabIndex = 50;
+            this.btnOptions.TabStop = false;
             this.btnOptions.Text = "Options";
-            this.btnOptions.UseVisualStyleBackColor = true;
+            this.btnOptions.UseVisualStyleBackColor = false;
             this.btnOptions.Click += new System.EventHandler(this.BtnOptions_Click);
             // 
             // btnDeviceInfo
             // 
+            this.btnDeviceInfo.BackColor = System.Drawing.Color.Transparent;
+            this.btnDeviceInfo.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnDeviceInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeviceInfo.Font = new System.Drawing.Font("Segoe UI", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeviceInfo.Font = new System.Drawing.Font("Segoe UI", 7.854546F);
             this.btnDeviceInfo.Location = new System.Drawing.Point(681, 6);
             this.btnDeviceInfo.Name = "btnDeviceInfo";
             this.btnDeviceInfo.Size = new System.Drawing.Size(102, 29);
             this.btnDeviceInfo.TabIndex = 49;
+            this.btnDeviceInfo.TabStop = false;
             this.btnDeviceInfo.Text = "Device Info";
-            this.btnDeviceInfo.UseVisualStyleBackColor = true;
+            this.btnDeviceInfo.UseVisualStyleBackColor = false;
             this.btnDeviceInfo.Click += new System.EventHandler(this.BtnDeviceInfo_Click);
             // 
             // cmbDevices
@@ -360,7 +402,7 @@ namespace ADB_Debloater
             this.cmbDevices.FormattingEnabled = true;
             this.cmbDevices.Location = new System.Drawing.Point(49, 40);
             this.cmbDevices.Name = "cmbDevices";
-            this.cmbDevices.Size = new System.Drawing.Size(224, 25);
+            this.cmbDevices.Size = new System.Drawing.Size(224, 23);
             this.cmbDevices.Sorted = true;
             this.cmbDevices.TabIndex = 47;
             this.cmbDevices.SelectedIndexChanged += new System.EventHandler(this.CmbDevices_SelectedIndexChanged);
@@ -374,6 +416,7 @@ namespace ADB_Debloater
             this.btnReloadDevice.Name = "btnReloadDevice";
             this.btnReloadDevice.Size = new System.Drawing.Size(25, 25);
             this.btnReloadDevice.TabIndex = 46;
+            this.btnReloadDevice.TabStop = false;
             this.btnReloadDevice.UseVisualStyleBackColor = true;
             this.btnReloadDevice.Click += new System.EventHandler(this.BtnReloadDevice_Click);
             // 
@@ -383,20 +426,24 @@ namespace ADB_Debloater
             this.lblConnectedStatus.Font = new System.Drawing.Font("Segoe UI", 11.78182F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConnectedStatus.Location = new System.Drawing.Point(45, 12);
             this.lblConnectedStatus.Name = "lblConnectedStatus";
-            this.lblConnectedStatus.Size = new System.Drawing.Size(156, 21);
+            this.lblConnectedStatus.Size = new System.Drawing.Size(154, 18);
             this.lblConnectedStatus.TabIndex = 45;
             this.lblConnectedStatus.Text = "No Device Connect";
             // 
             // btnAdbWifi
             // 
+            this.btnAdbWifi.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdbWifi.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnAdbWifi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdbWifi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnAdbWifi.Font = new System.Drawing.Font("Segoe UI", 7.854546F);
+            this.btnAdbWifi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(88)))), ((int)(((byte)(42)))));
             this.btnAdbWifi.Location = new System.Drawing.Point(681, 41);
             this.btnAdbWifi.Name = "btnAdbWifi";
             this.btnAdbWifi.Size = new System.Drawing.Size(102, 29);
             this.btnAdbWifi.TabIndex = 44;
+            this.btnAdbWifi.TabStop = false;
             this.btnAdbWifi.Text = "Wireless Debug";
-            this.btnAdbWifi.UseVisualStyleBackColor = true;
+            this.btnAdbWifi.UseVisualStyleBackColor = false;
             this.btnAdbWifi.Click += new System.EventHandler(this.BtnAdbWifi_Click);
             // 
             // dgvApps
@@ -409,14 +456,14 @@ namespace ADB_Debloater
             this.dgvApps.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvApps.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvApps.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 7.854546F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvApps.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 7.854546F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvApps.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvApps.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvApps.Dock = System.Windows.Forms.DockStyle.Left;
             this.dgvApps.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
@@ -424,14 +471,14 @@ namespace ADB_Debloater
             this.dgvApps.Location = new System.Drawing.Point(0, 77);
             this.dgvApps.Name = "dgvApps";
             this.dgvApps.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 7.854546F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvApps.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 7.854546F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvApps.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvApps.RowHeadersVisible = false;
             this.dgvApps.RowHeadersWidth = 47;
             this.dgvApps.RowTemplate.Height = 50;
@@ -441,6 +488,7 @@ namespace ADB_Debloater
             this.dgvApps.ShowRowErrors = false;
             this.dgvApps.Size = new System.Drawing.Size(672, 597);
             this.dgvApps.TabIndex = 28;
+            this.dgvApps.TabStop = false;
             this.dgvApps.SelectionChanged += new System.EventHandler(this.DgvApps_SelectionChanged);
             // 
             // btnExportApk
@@ -452,6 +500,7 @@ namespace ADB_Debloater
             this.btnExportApk.Name = "btnExportApk";
             this.btnExportApk.Size = new System.Drawing.Size(194, 29);
             this.btnExportApk.TabIndex = 29;
+            this.btnExportApk.TabStop = false;
             this.btnExportApk.Text = "Export APK";
             this.btnExportApk.UseVisualStyleBackColor = true;
             this.btnExportApk.Click += new System.EventHandler(this.BtnExportApk_Click);
@@ -465,6 +514,7 @@ namespace ADB_Debloater
             this.btnStdPackages.Name = "btnStdPackages";
             this.btnStdPackages.Size = new System.Drawing.Size(194, 29);
             this.btnStdPackages.TabIndex = 30;
+            this.btnStdPackages.TabStop = false;
             this.btnStdPackages.Text = "Select Standard Packages";
             this.btnStdPackages.UseVisualStyleBackColor = true;
             this.btnStdPackages.Click += new System.EventHandler(this.BtnStdPackages_Click);
@@ -478,6 +528,7 @@ namespace ADB_Debloater
             this.btnUpdtPackages.Name = "btnUpdtPackages";
             this.btnUpdtPackages.Size = new System.Drawing.Size(194, 29);
             this.btnUpdtPackages.TabIndex = 31;
+            this.btnUpdtPackages.TabStop = false;
             this.btnUpdtPackages.Text = "Select Update Packages";
             this.btnUpdtPackages.UseVisualStyleBackColor = true;
             this.btnUpdtPackages.Click += new System.EventHandler(this.BtnUpdtPackages_Click);
@@ -491,6 +542,7 @@ namespace ADB_Debloater
             this.btnUninstall.Name = "btnUninstall";
             this.btnUninstall.Size = new System.Drawing.Size(194, 29);
             this.btnUninstall.TabIndex = 32;
+            this.btnUninstall.TabStop = false;
             this.btnUninstall.Text = "Uninstall";
             this.btnUninstall.UseVisualStyleBackColor = true;
             this.btnUninstall.Click += new System.EventHandler(this.BtnUninstall_Click);
@@ -504,6 +556,7 @@ namespace ADB_Debloater
             this.btnEnableDisable.Name = "btnEnableDisable";
             this.btnEnableDisable.Size = new System.Drawing.Size(194, 29);
             this.btnEnableDisable.TabIndex = 33;
+            this.btnEnableDisable.TabStop = false;
             this.btnEnableDisable.Text = "Enable/Disable";
             this.btnEnableDisable.UseVisualStyleBackColor = true;
             this.btnEnableDisable.Click += new System.EventHandler(this.BtnEnableDisable_Click);
@@ -517,6 +570,7 @@ namespace ADB_Debloater
             this.btnLookupPkgName.Name = "btnLookupPkgName";
             this.btnLookupPkgName.Size = new System.Drawing.Size(194, 29);
             this.btnLookupPkgName.TabIndex = 34;
+            this.btnLookupPkgName.TabStop = false;
             this.btnLookupPkgName.Text = "Lookup Package Name";
             this.btnLookupPkgName.UseVisualStyleBackColor = true;
             this.btnLookupPkgName.Click += new System.EventHandler(this.BtnLookupPkgName_Click);
@@ -526,10 +580,11 @@ namespace ADB_Debloater
             this.btnRefreshList.Enabled = false;
             this.btnRefreshList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefreshList.Font = new System.Drawing.Font("Segoe UI", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefreshList.Location = new System.Drawing.Point(810, 334);
+            this.btnRefreshList.Location = new System.Drawing.Point(810, 337);
             this.btnRefreshList.Name = "btnRefreshList";
             this.btnRefreshList.Size = new System.Drawing.Size(129, 51);
             this.btnRefreshList.TabIndex = 35;
+            this.btnRefreshList.TabStop = false;
             this.btnRefreshList.Text = "Refresh App List";
             this.btnRefreshList.UseVisualStyleBackColor = true;
             this.btnRefreshList.Click += new System.EventHandler(this.BtnRefreshList_Click);
@@ -543,14 +598,16 @@ namespace ADB_Debloater
             this.btnCopyPkgName.Name = "btnCopyPkgName";
             this.btnCopyPkgName.Size = new System.Drawing.Size(194, 29);
             this.btnCopyPkgName.TabIndex = 36;
+            this.btnCopyPkgName.TabStop = false;
             this.btnCopyPkgName.Text = "Copy Package Name";
             this.btnCopyPkgName.UseVisualStyleBackColor = true;
             this.btnCopyPkgName.Click += new System.EventHandler(this.BtnCopyPkgName_Click);
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(954, 674);
             this.Controls.Add(this.btnCopyPkgName);
             this.Controls.Add(this.btnRefreshList);
@@ -565,13 +622,13 @@ namespace ADB_Debloater
             this.Controls.Add(this.lblPackageCount);
             this.Controls.Add(this.pnlAppControls);
             this.Controls.Add(this.lblSelected);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "frmMain";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ADB Debloater";
+            this.Text = "  ADB Debloater";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.pnlAppControls.ResumeLayout(false);
@@ -621,8 +678,9 @@ namespace ADB_Debloater
         private System.Windows.Forms.TextBox txtIP;
         private System.Windows.Forms.Button btnQuickGetIP;
         private System.Windows.Forms.TextBox txtPort;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblQuickPort;
+        private System.Windows.Forms.Label lblQuickIP;
+        private System.Windows.Forms.Button btnCreateInstallScript;
     }
 }
 

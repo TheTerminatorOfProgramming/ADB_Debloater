@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -46,6 +47,20 @@ namespace ADB_Debloater
                 mtRebootRecovery.Location = new Point(74, 190);
                 mtReboot.Location = new Point(74, 56);
             }
+
+            ArrayList controls = new ArrayList();
+            controls.Add(mtReboot);
+            controls.Add(mtRebootDownload);
+            controls.Add(mtRebootRecovery);
+
+            functions.SetTheme(this, controls);
+
+            ArrayList ctrls = new ArrayList
+            { 
+                Controls 
+            };
+
+            functions.setFont(this, Properties.Settings.Default.FontIndex, ctrls, null);
         }
 
         public void SetSerial(string serial)

@@ -58,7 +58,7 @@
             this.lblDevice.Font = new System.Drawing.Font("Segoe UI Black", 9.818182F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDevice.Location = new System.Drawing.Point(134, 28);
             this.lblDevice.Name = "lblDevice";
-            this.lblDevice.Size = new System.Drawing.Size(67, 21);
+            this.lblDevice.Size = new System.Drawing.Size(59, 19);
             this.lblDevice.TabIndex = 81;
             this.lblDevice.Text = "Device:";
             // 
@@ -79,7 +79,7 @@
             this.lblDeviceRgn.Font = new System.Drawing.Font("Segoe UI", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDeviceRgn.Location = new System.Drawing.Point(215, 230);
             this.lblDeviceRgn.Name = "lblDeviceRgn";
-            this.lblDeviceRgn.Size = new System.Drawing.Size(0, 20);
+            this.lblDeviceRgn.Size = new System.Drawing.Size(0, 16);
             this.lblDeviceRgn.TabIndex = 99;
             // 
             // lblFirmwareVersionDetails
@@ -88,7 +88,7 @@
             this.lblFirmwareVersionDetails.Font = new System.Drawing.Font("Segoe UI", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFirmwareVersionDetails.Location = new System.Drawing.Point(215, 316);
             this.lblFirmwareVersionDetails.Name = "lblFirmwareVersionDetails";
-            this.lblFirmwareVersionDetails.Size = new System.Drawing.Size(0, 20);
+            this.lblFirmwareVersionDetails.Size = new System.Drawing.Size(0, 16);
             this.lblFirmwareVersionDetails.TabIndex = 98;
             // 
             // lblAndroidVersionDetails
@@ -97,7 +97,7 @@
             this.lblAndroidVersionDetails.Font = new System.Drawing.Font("Segoe UI", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAndroidVersionDetails.Location = new System.Drawing.Point(215, 273);
             this.lblAndroidVersionDetails.Name = "lblAndroidVersionDetails";
-            this.lblAndroidVersionDetails.Size = new System.Drawing.Size(0, 20);
+            this.lblAndroidVersionDetails.Size = new System.Drawing.Size(0, 16);
             this.lblAndroidVersionDetails.TabIndex = 97;
             // 
             // lblIpAddress
@@ -106,7 +106,7 @@
             this.lblIpAddress.Font = new System.Drawing.Font("Segoe UI", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIpAddress.Location = new System.Drawing.Point(215, 402);
             this.lblIpAddress.Name = "lblIpAddress";
-            this.lblIpAddress.Size = new System.Drawing.Size(0, 20);
+            this.lblIpAddress.Size = new System.Drawing.Size(0, 16);
             this.lblIpAddress.TabIndex = 96;
             // 
             // lblWifiStatus
@@ -115,7 +115,7 @@
             this.lblWifiStatus.Font = new System.Drawing.Font("Segoe UI", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWifiStatus.Location = new System.Drawing.Point(215, 359);
             this.lblWifiStatus.Name = "lblWifiStatus";
-            this.lblWifiStatus.Size = new System.Drawing.Size(0, 20);
+            this.lblWifiStatus.Size = new System.Drawing.Size(0, 16);
             this.lblWifiStatus.TabIndex = 95;
             // 
             // lblPower
@@ -124,7 +124,7 @@
             this.lblPower.Font = new System.Drawing.Font("Segoe UI", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPower.Location = new System.Drawing.Point(215, 187);
             this.lblPower.Name = "lblPower";
-            this.lblPower.Size = new System.Drawing.Size(0, 20);
+            this.lblPower.Size = new System.Drawing.Size(0, 16);
             this.lblPower.TabIndex = 94;
             // 
             // lblSdCardNo
@@ -133,7 +133,7 @@
             this.lblSdCardNo.Font = new System.Drawing.Font("Segoe UI", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSdCardNo.Location = new System.Drawing.Point(215, 123);
             this.lblSdCardNo.Name = "lblSdCardNo";
-            this.lblSdCardNo.Size = new System.Drawing.Size(0, 20);
+            this.lblSdCardNo.Size = new System.Drawing.Size(0, 16);
             this.lblSdCardNo.TabIndex = 93;
             // 
             // lblSerialNo
@@ -142,7 +142,7 @@
             this.lblSerialNo.Font = new System.Drawing.Font("Segoe UI", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSerialNo.Location = new System.Drawing.Point(215, 80);
             this.lblSerialNo.Name = "lblSerialNo";
-            this.lblSerialNo.Size = new System.Drawing.Size(0, 20);
+            this.lblSerialNo.Size = new System.Drawing.Size(0, 16);
             this.lblSerialNo.TabIndex = 92;
             // 
             // lblDeviceRegion
@@ -151,7 +151,7 @@
             this.lblDeviceRegion.Font = new System.Drawing.Font("Segoe UI", 9.818182F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDeviceRegion.Location = new System.Drawing.Point(67, 230);
             this.lblDeviceRegion.Name = "lblDeviceRegion";
-            this.lblDeviceRegion.Size = new System.Drawing.Size(132, 20);
+            this.lblDeviceRegion.Size = new System.Drawing.Size(108, 16);
             this.lblDeviceRegion.TabIndex = 91;
             this.lblDeviceRegion.Text = "Device Region:";
             // 
@@ -161,7 +161,7 @@
             this.lblFirmwareVer.Font = new System.Drawing.Font("Segoe UI", 9.818182F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFirmwareVer.Location = new System.Drawing.Point(45, 316);
             this.lblFirmwareVer.Name = "lblFirmwareVer";
-            this.lblFirmwareVer.Size = new System.Drawing.Size(155, 20);
+            this.lblFirmwareVer.Size = new System.Drawing.Size(127, 16);
             this.lblFirmwareVer.TabIndex = 90;
             this.lblFirmwareVer.Text = "Firmware Version:";
             // 
@@ -171,7 +171,7 @@
             this.lblAndroidVer.Font = new System.Drawing.Font("Segoe UI", 9.818182F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAndroidVer.Location = new System.Drawing.Point(54, 272);
             this.lblAndroidVer.Name = "lblAndroidVer";
-            this.lblAndroidVer.Size = new System.Drawing.Size(147, 20);
+            this.lblAndroidVer.Size = new System.Drawing.Size(119, 16);
             this.lblAndroidVer.TabIndex = 89;
             this.lblAndroidVer.Text = "Android Version:";
             // 
@@ -181,7 +181,7 @@
             this.lblIp.Font = new System.Drawing.Font("Segoe UI", 9.818182F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIp.Location = new System.Drawing.Point(98, 402);
             this.lblIp.Name = "lblIp";
-            this.lblIp.Size = new System.Drawing.Size(103, 20);
+            this.lblIp.Size = new System.Drawing.Size(85, 16);
             this.lblIp.TabIndex = 88;
             this.lblIp.Text = "IP Address:";
             // 
@@ -191,7 +191,7 @@
             this.lblWifi.Font = new System.Drawing.Font("Segoe UI", 9.818182F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWifi.Location = new System.Drawing.Point(86, 359);
             this.lblWifi.Name = "lblWifi";
-            this.lblWifi.Size = new System.Drawing.Size(114, 20);
+            this.lblWifi.Size = new System.Drawing.Size(99, 16);
             this.lblWifi.TabIndex = 87;
             this.lblWifi.Text = "Wi-Fi Status:";
             // 
@@ -201,7 +201,7 @@
             this.lblPowerLvl.Font = new System.Drawing.Font("Segoe UI", 9.818182F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPowerLvl.Location = new System.Drawing.Point(85, 187);
             this.lblPowerLvl.Name = "lblPowerLvl";
-            this.lblPowerLvl.Size = new System.Drawing.Size(111, 20);
+            this.lblPowerLvl.Size = new System.Drawing.Size(95, 16);
             this.lblPowerLvl.TabIndex = 86;
             this.lblPowerLvl.Text = "Power Level:";
             // 
@@ -211,7 +211,7 @@
             this.lblSdCard.Font = new System.Drawing.Font("Segoe UI", 9.818182F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSdCard.Location = new System.Drawing.Point(117, 123);
             this.lblSdCard.Name = "lblSdCard";
-            this.lblSdCard.Size = new System.Drawing.Size(79, 20);
+            this.lblSdCard.Size = new System.Drawing.Size(63, 16);
             this.lblSdCard.TabIndex = 85;
             this.lblSdCard.Text = "Storage:";
             // 
@@ -221,7 +221,7 @@
             this.lblSerial.Font = new System.Drawing.Font("Segoe UI", 9.818182F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSerial.Location = new System.Drawing.Point(134, 80);
             this.lblSerial.Name = "lblSerial";
-            this.lblSerial.Size = new System.Drawing.Size(59, 20);
+            this.lblSerial.Size = new System.Drawing.Size(50, 16);
             this.lblSerial.TabIndex = 84;
             this.lblSerial.Text = "Serial:";
             // 
@@ -290,7 +290,9 @@
             this.Controls.Add(this.lblSerial);
             this.Controls.Add(this.gpbDeviceCP);
             this.Controls.Add(this.lblDevice);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmDeviceInfo";
+            this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Device Info";

@@ -38,6 +38,9 @@
             this.lblStandard = new System.Windows.Forms.Label();
             this.lstSWUpdate = new System.Windows.Forms.ListBox();
             this.lstStandard = new System.Windows.Forms.ListBox();
+            this.lblFont = new System.Windows.Forms.Label();
+            this.cmbFont = new System.Windows.Forms.ComboBox();
+            this.btnReset = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnResetSWUpdate
@@ -68,9 +71,9 @@
             // 
             this.lblTheme.AutoSize = true;
             this.lblTheme.Font = new System.Drawing.Font("Segoe UI", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTheme.Location = new System.Drawing.Point(12, 209);
+            this.lblTheme.Location = new System.Drawing.Point(12, 147);
             this.lblTheme.Name = "lblTheme";
-            this.lblTheme.Size = new System.Drawing.Size(45, 13);
+            this.lblTheme.Size = new System.Drawing.Size(46, 12);
             this.lblTheme.TabIndex = 23;
             this.lblTheme.Text = "Theme:";
             // 
@@ -82,7 +85,7 @@
             "Auto",
             "Light",
             "Dark"});
-            this.cmbTheme.Location = new System.Drawing.Point(15, 229);
+            this.cmbTheme.Location = new System.Drawing.Point(15, 167);
             this.cmbTheme.Name = "cmbTheme";
             this.cmbTheme.Size = new System.Drawing.Size(121, 21);
             this.cmbTheme.TabIndex = 22;
@@ -148,11 +151,46 @@
             this.lstStandard.Size = new System.Drawing.Size(329, 264);
             this.lstStandard.TabIndex = 16;
             // 
+            // lblFont
+            // 
+            this.lblFont.AutoSize = true;
+            this.lblFont.Font = new System.Drawing.Font("Segoe UI", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFont.Location = new System.Drawing.Point(13, 221);
+            this.lblFont.Name = "lblFont";
+            this.lblFont.Size = new System.Drawing.Size(33, 12);
+            this.lblFont.TabIndex = 27;
+            this.lblFont.Text = "Font:";
+            // 
+            // cmbFont
+            // 
+            this.cmbFont.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFont.FormattingEnabled = true;
+            this.cmbFont.Location = new System.Drawing.Point(16, 241);
+            this.cmbFont.Name = "cmbFont";
+            this.cmbFont.Size = new System.Drawing.Size(142, 21);
+            this.cmbFont.TabIndex = 26;
+            this.cmbFont.SelectedIndexChanged += new System.EventHandler(this.cmbFont_SelectedIndexChanged);
+            // 
+            // btnReset
+            // 
+            this.btnReset.BackColor = System.Drawing.Color.Transparent;
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReset.Location = new System.Drawing.Point(12, 411);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(107, 36);
+            this.btnReset.TabIndex = 28;
+            this.btnReset.Text = "Reset to Default";
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // frmOptions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(917, 459);
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.lblFont);
+            this.Controls.Add(this.cmbFont);
             this.Controls.Add(this.btnResetSWUpdate);
             this.Controls.Add(this.btnResetStandard);
             this.Controls.Add(this.lblTheme);
@@ -170,7 +208,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmOptions";
+            this.Text = "Options";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmOptions_FormClosing);
             this.Load += new System.EventHandler(this.FrmOptions_Load);
             this.ResumeLayout(false);
@@ -189,5 +227,8 @@
         private System.Windows.Forms.Label lblStandard;
         private System.Windows.Forms.ListBox lstSWUpdate;
         private System.Windows.Forms.ListBox lstStandard;
+        private System.Windows.Forms.Label lblFont;
+        private System.Windows.Forms.ComboBox cmbFont;
+        private System.Windows.Forms.Button btnReset;
     }
 }

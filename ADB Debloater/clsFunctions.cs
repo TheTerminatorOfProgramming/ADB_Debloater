@@ -6,21 +6,25 @@ using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Text;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using JR.Utils.GUI.Forms;
 
 namespace ADB_Debloater
 {
     class clsFunctions
     {
         private string output = "";
-        private string adb = Directory.GetCurrentDirectory() + "\\Tools\\ADB\\adb.exe";
-        private string Configs = Directory.GetCurrentDirectory() + "\\Config";
-        private string APKSavePath = Directory.GetCurrentDirectory() + "\\APK\\Saves";
-        private string Temp = Directory.GetCurrentDirectory() + "\\Temp";
+        private string adb = Directory.GetCurrentDirectory() + "\\tools\\ADB\\adb.exe";
+        private string Configs = Directory.GetCurrentDirectory() + "\\config";
+        private string APKSavePath = Directory.GetCurrentDirectory() + "\\apk\\saves";
+        private string Fonts = Directory.GetCurrentDirectory() + "\\fonts";
+        private string WorkDir = Directory.GetCurrentDirectory();
+        private string Temp = Directory.GetCurrentDirectory() + "\\temp";
         private string selectedSerial = "";
         ArrayList disabled;
         string sdSerial = "";
@@ -39,6 +43,7 @@ namespace ADB_Debloater
         private TextBox search = Application.OpenForms["frmMain"].Controls.Find("txtSearch", true)[0] as TextBox;
         private DataGridView dgv = Application.OpenForms["frmMain"].Controls.Find("dgvApps", true)[0] as DataGridView;     
         private ComboBox searchquery = Application.OpenForms["frmMain"].Controls.Find("cmbSearchCriteria", true)[0] as ComboBox;
+        PrivateFontCollection pfc = new PrivateFontCollection();
         public string GetName()
         {
             string name = AssemblyProduct;
@@ -154,9 +159,6 @@ namespace ADB_Debloater
 
         public void SetTheme(Form frm, ArrayList controls)
         {
-
-
-
             if (Properties.Settings.Default.Theme == 0)
             {
                 frm.BackColor = Color.White;
@@ -439,13 +441,16 @@ namespace ADB_Debloater
                     if (regex.IsMatch(temp[i].ToString()) || temp[i].ToString().Any(char.IsDigit) && !temp[i].ToString().Contains(":"))
                     {
 #if DEBUG
-                        MessageBox.Show(temp[i].ToString());
+                        FlexibleMessageBox.FONT = setMessageBoxFont(Properties.Settings.Default.FontIndex);
+                        FlexibleMessageBox.Show(temp[i].ToString());
+                        
 #endif
 
                         NewADBCommand(" -s " + temp[i].ToString() + " shell settings get global device_name", true, true);
 
 #if DEBUG
-                        MessageBox.Show(getOutput()); //Debug Only
+                        FlexibleMessageBox.FONT = setMessageBoxFont(Properties.Settings.Default.FontIndex);
+                        FlexibleMessageBox.Show(getOutput()); //Debug Only
 #endif
 
                         frmMain form = (frmMain)Application.OpenForms["frmMain"];
@@ -460,7 +465,8 @@ namespace ADB_Debloater
             }
             else
             {
-                MessageBox.Show("A Device is Unauthorized for ADB Use, Please Authorize and Try Again", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FlexibleMessageBox.FONT = setMessageBoxFont(Properties.Settings.Default.FontIndex);
+                FlexibleMessageBox.Show("A Device is Unauthorized for ADB Use, Please Authorize and Try Again", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -784,7 +790,8 @@ namespace ADB_Debloater
                         }
                         else
                         {
-                            MessageBox.Show("The search string did not find any items in the ListBox that matches " + "\"" + searchString + "\"");
+                            FlexibleMessageBox.FONT = setMessageBoxFont(Properties.Settings.Default.FontIndex);
+                            FlexibleMessageBox.Show("The search string did not find any items in the ListBox that matches " + "\"" + searchString + "\"");
                         }
                     }
                 }
@@ -826,11 +833,13 @@ namespace ADB_Debloater
             string appInstalled = getOutput();
             if (appInstalled.Contains("Success"))
             {
-                MessageBox.Show("App Installed: " + fileName, "App Installed", MessageBoxButtons.OK);
+                FlexibleMessageBox.FONT = setMessageBoxFont(Properties.Settings.Default.FontIndex);
+                FlexibleMessageBox.Show("App Installed: " + fileName, "App Installed", MessageBoxButtons.OK);
             }
             else
             {
-                MessageBox.Show("App Not Installed: " + fileName, "App Not Installed", MessageBoxButtons.OK);
+                FlexibleMessageBox.FONT = setMessageBoxFont(Properties.Settings.Default.FontIndex);
+                FlexibleMessageBox.Show("App Not Installed: " + fileName, "App Not Installed", MessageBoxButtons.OK);
             }
         }
 
@@ -840,11 +849,13 @@ namespace ADB_Debloater
 
             if (getOutput() != string.Empty)
             {
-                MessageBox.Show("App Reinstalled: " + package, "App Installed", MessageBoxButtons.OK);
+                FlexibleMessageBox.FONT = setMessageBoxFont(Properties.Settings.Default.FontIndex);
+                FlexibleMessageBox.Show("App Reinstalled: " + package, "App Installed", MessageBoxButtons.OK);
             }
             else
             {
-                MessageBox.Show("App Not Installed: " + package, "App Not Installed", MessageBoxButtons.OK);
+                FlexibleMessageBox.FONT = setMessageBoxFont(Properties.Settings.Default.FontIndex);
+                FlexibleMessageBox.Show("App Not Installed: " + package, "App Not Installed", MessageBoxButtons.OK);
             }
         }
 
@@ -1026,6 +1037,111 @@ namespace ADB_Debloater
                     Application.OpenForms[i].Invalidate();
                     Application.OpenForms[i].Refresh();
                 }
+            }
+        }
+
+        public void setFont(Form frm, int index, ArrayList ctrls, DataGridView dgv)
+        {
+            string[] lines = File.ReadAllLines(WorkDir + @"\" + "fonts-config.ini");
+            foreach (var font in lines)
+            {
+                pfc.AddFontFile(Fonts + @"\" + font);
+            }
+            if (index != 0)
+            {
+                frm.Font = new Font(pfc.Families[index - 1], 8.25F, FontStyle.Regular);
+
+                foreach (Control.ControlCollection cc in ctrls)
+                {
+                    foreach (Control c in cc)
+                    {
+                        if (c.Name.Contains("dgv"))
+                        {
+                            foreach (DataGridViewColumn column in dgv.Columns)
+                            {
+                                column.DefaultCellStyle.Font = new Font(pfc.Families[index - 1], 8.25F, FontStyle.Regular);
+                            }
+                        }
+                        else
+                        {
+                            if (c.Name.Contains("lblConnectedStatus") || c.Name.Contains("lblQuickConnectWlDebug") || c.Name.Contains("lblDevice") || c.Name.Contains("lblSearch"))
+                            {
+                                c.Font = new Font(pfc.Families[index - 1], 11.78F, FontStyle.Bold);
+                            }
+                            else
+                            {
+                                if (c.Name.Contains("lblIP") || c.Name.Contains("lblPort") || c.Name.Contains("lblPair") || c.Name.Contains("lblTheme") || c.Name.Contains("lblFont") ||
+                                    c.Name.Contains("btnExport") || c.Name.Contains("btnImport") || c.Name.Contains("btnInstallAPK") || c.Name.Contains("btnReinstall") || c.Name.Contains("btnCreateScript") ||
+                                    c.Name.Contains("btnCreateInstallScript") || c.Name.Contains("btnRefreshList") || c.Name.Contains("btnStdPackages") || c.Name.Contains("btnUpdtPackages") || c.Name.Contains("btnEnableDisable") ||
+                                    c.Name.Contains("btnUninstall") || c.Name.Contains("btnExportApk") || c.Name.Contains("btnLookupPkgName") || c.Name.Contains("btnCopyPkgName"))
+                                {
+                                    c.Font = new Font(pfc.Families[index - 1], 7.85F, FontStyle.Bold);
+                                }
+                                else
+                                {
+                                    c.Font = new Font(pfc.Families[index - 1], 8.25F, FontStyle.Regular);
+                                }
+                            }
+                        }
+                    }                    
+                }
+            }
+            else {
+                frm.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular);
+
+                foreach (Control.ControlCollection cc in ctrls)
+                {
+                    foreach (Control c in cc)
+                    {
+                        if (c.Name.Contains("dgv"))
+                        {
+                            foreach (DataGridViewColumn column in dgv.Columns)
+                            {
+                                column.DefaultCellStyle.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular);
+                            }
+                        }
+                        else
+                        {
+                            if (c.Name.Contains("lblConnectedStatus") || c.Name.Contains("lblQuickConnectWlDebug") || c.Name.Contains("lblDevice") || c.Name.Contains("lblSearch"))
+                            {
+                                c.Font = new Font("Segoe UI", 11.78F, FontStyle.Bold);
+                            }
+                            else
+                            {
+                                if (c.Name.Contains("lblIP") || c.Name.Contains("lblPort") || c.Name.Contains("lblPair") || c.Name.Contains("lblTheme") || c.Name.Contains("lblFont") ||
+                                    c.Name.Contains("btnExport") || c.Name.Contains("btnImport") || c.Name.Contains("btnInstallAPK") || c.Name.Contains("btnReinstall") || c.Name.Contains("btnCreateScript") ||
+                                    c.Name.Contains("btnCreateInstallScript") || c.Name.Contains("btnRefreshList") || c.Name.Contains("btnStdPackages") || c.Name.Contains("btnUpdtPackages") || c.Name.Contains("btnEnableDisable") ||
+                                    c.Name.Contains("btnUninstall") || c.Name.Contains("btnExportApk") || c.Name.Contains("btnLookupPkgName") || c.Name.Contains("btnCopyPkgName"))
+                                {
+                                    c.Font = new Font("Segoe UI", 7.85F, FontStyle.Bold);
+                                }
+                                else
+                                {
+                                    c.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public Font setMessageBoxFont(int index)
+        {
+            PrivateFontCollection pfcmsg = new PrivateFontCollection();
+            string[] lines = File.ReadAllLines(WorkDir + @"\" + "fonts-config.ini");
+            foreach (var font in lines)
+            {
+                pfcmsg.AddFontFile(Fonts + @"\" + font);
+            }
+
+            if (Properties.Settings.Default.Font == "System Default")
+            {
+                return new Font("Segoe UI", 8.25F, FontStyle.Regular);
+            }
+            else
+            {
+                return new Font(pfcmsg.Families[index - 1], 8.25F, FontStyle.Regular);
             }
         }
     }

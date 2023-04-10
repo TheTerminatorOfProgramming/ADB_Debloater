@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JR.Utils.GUI.Forms;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,9 +18,11 @@ namespace ADB_Debloater
         private string uninstallString = "adb shell pm uninstall -k --user 0 ";
         private string enableString = "adb shell pm enable ";
         private string disableString = "adb shell pm disable-user --user 0 ";
+        private string reinstallstring = "adb shell cmd package install-existing ";
         string file = "";
         string dir = "";
         string name = "";
+        clsFunctions functions = new clsFunctions();
         public frmCreateScript(string filePath, string directory)
         {
             InitializeComponent();
@@ -51,6 +54,23 @@ namespace ADB_Debloater
             }
 
             dgvApps.ClearSelection();
+
+            ArrayList controls = new ArrayList();
+            controls.Add(dgvApps);
+            controls.Add(btnAllDisable);
+            controls.Add(btnAllEnable);
+            controls.Add(btnAllReinstall);
+            controls.Add(btnAllUninstall);
+            controls.Add(btnCreate);
+
+            functions.SetTheme(this, controls);
+
+            ArrayList ctrls = new ArrayList
+            {
+                Controls
+            };
+
+            functions.setFont(this, Properties.Settings.Default.FontIndex, ctrls, null);
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -64,17 +84,21 @@ namespace ADB_Debloater
             {
                 using (StreamWriter writer = new StreamWriter(dir + @"\" + name + " Script.bat", append: true))
                 {
-                    if (dgvApps.Rows[i].Cells["Type"].Value.ToString() == "Uninstall")
+                    if (dgvApps.Rows[i].Cells["Action"].Value.ToString() == "Uninstall")
                     {
                         writer.WriteLine(uninstallString + dgvApps.Rows[i].Cells["Package"].Value.ToString());
                     }
-                    else if (dgvApps.Rows[i].Cells["Type"].Value.ToString() == "Disable")
+                    else if (dgvApps.Rows[i].Cells["Action"].Value.ToString() == "Disable")
                     {
                         writer.WriteLine(disableString + dgvApps.Rows[i].Cells["Package"].Value.ToString());
                     }
-                    else if (dgvApps.Rows[i].Cells["Type"].Value.ToString() == "Enable")
+                    else if (dgvApps.Rows[i].Cells["Action"].Value.ToString() == "Enable")
                     {
                         writer.WriteLine(enableString + dgvApps.Rows[i].Cells["Package"].Value.ToString());
+                    }
+                    else if (dgvApps.Rows[i].Cells["Action"].Value.ToString() == "Reinstall")
+                    {
+                        writer.WriteLine(reinstallstring + dgvApps.Rows[i].Cells["Package"].Value.ToString());
                     }
                 }
             }
@@ -87,11 +111,13 @@ namespace ADB_Debloater
                     tw.Write("timeout /t 10");
                 }
 
-                MessageBox.Show("Success: Script Created!");
+                FlexibleMessageBox.FONT = functions.setMessageBoxFont(Properties.Settings.Default.FontIndex);
+                FlexibleMessageBox.Show("Success: Script Created!");
             }
             else
             {
-                MessageBox.Show("Error: Script Not Created!");
+                FlexibleMessageBox.FONT = functions.setMessageBoxFont(Properties.Settings.Default.FontIndex);
+                FlexibleMessageBox.Show("Error: Script Not Created!");
             }
 
             Close();
@@ -105,6 +131,38 @@ namespace ADB_Debloater
         private void dgvApps_SelectionChanged_1(object sender, EventArgs e)
         {
             dgvApps.ClearSelection();
+        }
+
+        private void btnAllEnable_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dgvApps.Rows)
+            {
+                row.Cells[dgvApps.Columns["Action"].Index].Value = "Enable";
+            }
+        }
+
+        private void btnAllDisable_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dgvApps.Rows)
+            {
+                row.Cells[dgvApps.Columns["Action"].Index].Value = "Disable";
+            }
+        }
+
+        private void btnAllUninstall_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dgvApps.Rows)
+            {
+                row.Cells[dgvApps.Columns["Action"].Index].Value = "Uninstall";
+            }
+        }
+
+        private void btnAllReinstall_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dgvApps.Rows)
+            {
+                row.Cells[dgvApps.Columns["Action"].Index].Value = "Reinstall";
+            }
         }
     }
 }

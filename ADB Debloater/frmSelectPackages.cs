@@ -11,7 +11,7 @@ namespace ADB_Debloater
     {
         private bool standard;
         private ArrayList imported = new ArrayList();
-        private string Configs = Directory.GetCurrentDirectory() + "\\Config";
+        private string Configs = Directory.GetCurrentDirectory() + "\\config";
         private List<string> selectedPackage;
         private ListBox std = Application.OpenForms["frmOptions"].Controls.Find("lstStandard", true)[0] as ListBox;
         private ListBox sw = Application.OpenForms["frmOptions"].Controls.Find("lstSWUpdate", true)[0] as ListBox;
@@ -63,6 +63,13 @@ namespace ADB_Debloater
             controls.Add(lstPackages);
 
             functions.SetTheme(this, controls);
+
+            ArrayList ctrls = new ArrayList
+            {
+                Controls
+            };
+
+            functions.setFont(this, Properties.Settings.Default.FontIndex, ctrls, null);
         }
 
         private void btnSelect_Click(object sender, EventArgs e)

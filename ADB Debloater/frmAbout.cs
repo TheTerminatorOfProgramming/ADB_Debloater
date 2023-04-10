@@ -38,6 +38,13 @@ namespace ADB_Debloater
             controls.Add(txtDescription);
 
             functions.SetTheme(this, controls);
+
+            ArrayList ctrls = new ArrayList
+            {
+                Controls
+            };
+
+            functions.setFont(this, Properties.Settings.Default.FontIndex, ctrls, null);
         }
     }
 }

@@ -82,5 +82,41 @@ namespace ADB_Debloater.Properties {
                 this["WirelessConnected"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("System Default")]
+        public string Font {
+            get {
+                return ((string)(this["Font"]));
+            }
+            set {
+                this["Font"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int FontIndex {
+            get {
+                return ((int)(this["FontIndex"]));
+            }
+            set {
+                this["FontIndex"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool DialogShown {
+            get {
+                return ((bool)(this["DialogShown"]));
+            }
+            set {
+                this["DialogShown"] = value;
+            }
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JR.Utils.GUI.Forms;
+using System;
 using System.Collections;
 using System.IO;
 using System.Windows.Forms;
@@ -7,8 +8,8 @@ namespace ADB_Debloater
 {
     public partial class frmConnectWirelessDebug : Form
     {
-        private string ConnectBat = Directory.GetCurrentDirectory() + "\\Tools\\Scripts\\ADBDebug Connect.bat";
-        private string PairBat = Directory.GetCurrentDirectory() + "\\Tools\\Scripts\\ADBDebug Pair.bat";
+        private string ConnectBat = Directory.GetCurrentDirectory() + "\\tools\\scripts\\ADBDebug Connect.bat";
+        private string PairBat = Directory.GetCurrentDirectory() + "\\tools\\scripts\\ADBDebug Pair.bat";
         private string cmd = "C:\\Windows\\System32\\cmd.exe";
         private string serial = "";
         private ArrayList devices;
@@ -52,7 +53,8 @@ namespace ADB_Debloater
 
                     if (serial != "" && devices.Contains(serial))
                     {
-                        MessageBox.Show("Remove Device from USB Cable!");
+                        FlexibleMessageBox.FONT = functions.setMessageBoxFont(Properties.Settings.Default.FontIndex);
+                        FlexibleMessageBox.Show("Remove Device from USB Cable!");
                         Properties.Settings.Default.WirelessConnected = true;
                         Properties.Settings.Default.Save();
                         this.Close();
@@ -96,6 +98,13 @@ namespace ADB_Debloater
             controls.Add(txtPort);
             controls.Add(btnConnect);
             functions.SetTheme(this, controls);
+
+            ArrayList ctrls = new ArrayList
+            {
+                Controls
+            };
+
+            functions.setFont(this, Properties.Settings.Default.FontIndex, ctrls, null);
         }
 
         private void frmConnectWirelessDebug_FormClosed(object sender, FormClosedEventArgs e)

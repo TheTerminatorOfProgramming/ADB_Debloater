@@ -1,4 +1,6 @@
-﻿using Microsoft.VisualBasic;
+﻿using ADB_Debloater.Properties;
+using JR.Utils.GUI.Forms;
+using Microsoft.VisualBasic;
 using Microsoft.Win32;
 using System;
 using System.Collections;
@@ -29,9 +31,9 @@ namespace ADB_Debloater
         private DataTable apps = new DataTable();
         private string filterField;
         private string position = "";
-        private string APKSavePath = Directory.GetCurrentDirectory() + "\\APK\\Saves";
-        private string adbPath = Directory.GetCurrentDirectory() + "\\Tools\\ADB";
-        private string Configs = Directory.GetCurrentDirectory() + "\\Config";
+        private string APKSavePath = Directory.GetCurrentDirectory() + "\\apk\\saves";
+        private string adbPath = Directory.GetCurrentDirectory() + "\\tools\\ADB";
+        private string Configs = Directory.GetCurrentDirectory() + "\\config";
         private System.Threading.Timer temp;
         private DateTime startTime;
         private int time;
@@ -81,7 +83,8 @@ namespace ADB_Debloater
                         functions.GetDevices();
 
 #if DEBUG
-                        MessageBox.Show(deviceNames.Count.ToString()); //Debug Only
+                        FlexibleMessageBox.FONT = functions.setMessageBoxFont(Properties.Settings.Default.FontIndex);
+                        FlexibleMessageBox.Show(deviceNames.Count.ToString()); //Debug Only
 #endif
 
                         for (int i = 0; i < deviceNames.Count; i++)
@@ -90,7 +93,8 @@ namespace ADB_Debloater
                             {
                                 if (deviceNames[i].ToString() == deviceNames[i - 1].ToString())
                                 {
-                                    MessageBox.Show("Please Unplug USB Cable When in ADB Wireless\n\nDevices Connected by Multiple Methods (USB\\ADB Wifi) Will Only have the ADB Wifi Mode Added!");
+                                    FlexibleMessageBox.FONT = functions.setMessageBoxFont(Properties.Settings.Default.FontIndex);
+                                    FlexibleMessageBox.Show("Please Unplug USB Cable When in ADB Wireless\n\nDevices Connected by Multiple Methods (USB\\ADB Wifi) Will Only have the ADB Wifi Mode Added!");
 
                                     if (!deviceSerial[i].ToString().Contains(":"))
                                     {
@@ -146,7 +150,8 @@ namespace ADB_Debloater
                     }
                     else
                     {
-                        if (MessageBox.Show("Cygwin Not Installed, Install The Cygwin with the Grep Command and Try Again", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                        FlexibleMessageBox.FONT = functions.setMessageBoxFont(Properties.Settings.Default.FontIndex);
+                        if (FlexibleMessageBox.Show("Cygwin Not Installed, Install The Cygwin with the Grep Command and Try Again", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
                         {
                             this.Close();
                         }
@@ -156,6 +161,26 @@ namespace ADB_Debloater
 
             txtIP.Clear();
             txtPort.Clear();
+
+            ArrayList ctrls = new ArrayList
+            {
+                Controls,
+                pnlAPK.Controls,
+                pnlAppControls.Controls,
+                pnlDev.Controls,
+                dgvApps.Controls
+            };
+
+            functions.setFont(this, Properties.Settings.Default.FontIndex, ctrls, dgvApps);
+
+            if (BackColor == Color.White)
+            {
+                btnReloadDevice.Image = Resources.refresh_black;
+            }
+            else
+            {
+                btnReloadDevice.Image = Resources.refresh_white;
+            }
         }
 
         private void BtnDeviceInfo_Click(object sender, EventArgs e)
@@ -167,7 +192,8 @@ namespace ADB_Debloater
             }
             else
             {
-                MessageBox.Show("This Function is Unavailable due to No Devices Connected!");
+                FlexibleMessageBox.FONT = functions.setMessageBoxFont(Properties.Settings.Default.FontIndex);
+                FlexibleMessageBox.Show("This Function is Unavailable due to No Devices Connected!");
             }
         }
 
@@ -197,6 +223,7 @@ namespace ADB_Debloater
                 btnInstallAPK.Enabled = false;
                 btnReinstall.Enabled = false;
                 btnCreateScript.Enabled = false;
+                btnCreateInstallScript.Enabled = false;
                 btnStdPackages.Enabled = false;
                 btnUpdtPackages.Enabled = false;
                 btnExportApk.Enabled = false;
@@ -216,6 +243,7 @@ namespace ADB_Debloater
                 btnInstallAPK.Enabled = true;
                 btnReinstall.Enabled = true;
                 btnCreateScript.Enabled = true;
+                btnCreateInstallScript.Enabled = true;
                 btnStdPackages.Enabled = true;
                 btnUpdtPackages.Enabled = true;
                 btnExportApk.Enabled = true;
@@ -225,7 +253,6 @@ namespace ADB_Debloater
                 btnUninstall.Enabled = true;
                 btnRefreshList.Enabled = true;
                 btnQuickGetIP.Enabled = true;
-
                 functions.GetApps(apps);
                 dgvApps.ClearSelection();
 
@@ -262,7 +289,8 @@ namespace ADB_Debloater
             functions.GetDevices();
 
 #if DEBUG
-            MessageBox.Show(deviceNames.Count.ToString()); //Debug Only
+            FlexibleMessageBox.FONT = functions.setMessageBoxFont(Properties.Settings.Default.FontIndex);
+            FlexibleMessageBox.Show(deviceNames.Count.ToString()); //Debug Only
 #endif
 
             for (int i = 0; i < deviceNames.Count; i++)
@@ -271,7 +299,8 @@ namespace ADB_Debloater
                 {
                     if (deviceNames[i].ToString() == deviceNames[i - 1].ToString())
                     {
-                        MessageBox.Show("Please Unplug USB Cable When in ADB Wireless\n\nDevices Connected by Multiple Methods (USB\\ADB Wifi) Will Only have the ADB Wifi Mode Added!");
+                        FlexibleMessageBox.FONT = functions.setMessageBoxFont(Properties.Settings.Default.FontIndex);
+                        FlexibleMessageBox.Show("Please Unplug USB Cable When in ADB Wireless\n\nDevices Connected by Multiple Methods (USB\\ADB Wifi) Will Only have the ADB Wifi Mode Added!");
 
                         if (!deviceSerial[i].ToString().Contains(":"))
                         {
@@ -375,13 +404,17 @@ namespace ADB_Debloater
             ofdAPK.InitialDirectory = @"C:\Users\" + Environment.UserName + @"\Downloads";
             ofdAPK.Title = "Browse APK Files";
             ofdAPK.Filter = "apk files (*.apk)|*.apk";
+            ofdAPK.RestoreDirectory = true;
             ofdAPK.FilterIndex = 1;
-            ofdAPK.Multiselect = false;
+            ofdAPK.Multiselect = true;
             ofdAPK.FileName = "";
 
             if (ofdAPK.ShowDialog() == DialogResult.OK)
             {
-                functions.InstallAPK(ofdAPK.FileName);
+                foreach (string file in ofdAPK.FileNames)
+                {
+                    functions.InstallAPK(file);
+                }
             }
 
             functions.GetApps(apps);
@@ -391,9 +424,12 @@ namespace ADB_Debloater
 
         private void BtnReinstall_Click(object sender, EventArgs e)
         {
-            ArrayList multiChoice = new ArrayList();
-            multiChoice.Add("Choose From Current Session");
-            multiChoice.Add("Manually Input Package Name");
+            ArrayList multiChoice = new ArrayList
+            {
+                "Choose From Current Session",
+                "Manually Input Package Name",
+                "From File"
+            };
 
             if (ShowComboDialog(multiChoice, "Select How to Reinstall Package") == DialogResult.OK)
             {
@@ -412,16 +448,44 @@ namespace ADB_Debloater
                     }
                     else
                     {
-                        MessageBox.Show("No Packages Available to Reinstall");
+                        FlexibleMessageBox.FONT = functions.setMessageBoxFont(Properties.Settings.Default.FontIndex);
+                        FlexibleMessageBox.Show("No Packages Available to Reinstall");
                     }
                 }
-                else
+                if (GetComboValue() == "Choose From Current Session")
                 {
                     string input = "";
                     if (ShowInputDialog(ref input, "Input Package Name!") == DialogResult.OK)
                     {
                         functions.ReinstallApp(GetValue());
 
+                        functions.GetApps(apps);
+
+                        dgvApps.ClearSelection();
+                    }
+                }
+
+                if (GetComboValue() == "From File")
+                {
+                    System.Windows.Forms.OpenFileDialog ofdList = new System.Windows.Forms.OpenFileDialog();
+
+                    ofdList.InitialDirectory = @"C:\Users\" + Environment.UserName + @"\Downloads";
+                    ofdList.Title = "Browse ACFG Files";
+                    ofdList.Filter = "acfg files (*.acfg)|*.acfg";
+                    ofdList.RestoreDirectory = true;
+                    ofdList.FilterIndex = 1;
+                    ofdList.Multiselect = true;
+                    ofdList.FileName = "";
+
+                    if (ofdList.ShowDialog() == DialogResult.OK)
+                    {
+                        foreach (string line in File.ReadLines(ofdList.FileName, Encoding.UTF8))
+                        {
+                            if (line != "")
+                            {
+                                functions.ReinstallApp(line);
+                            }
+                        }
                         functions.GetApps(apps);
 
                         dgvApps.ClearSelection();
@@ -807,14 +871,16 @@ namespace ADB_Debloater
 
                 if (deviceSerial[cmbDevices.SelectedIndex].ToString() != "" && deviceSerial.Contains(deviceSerial[cmbDevices.SelectedIndex].ToString()))
                 {
-                    MessageBox.Show("Remove Device from USB Cable!");
+                    FlexibleMessageBox.FONT = functions.setMessageBoxFont(Properties.Settings.Default.FontIndex);
+                    FlexibleMessageBox.Show("Remove Device from USB Cable!");
                     txtPort.Enabled = false;
                     Properties.Settings.Default.WirelessConnected = true;
                     Properties.Settings.Default.Save();
                 }
             }else
             {
-                MessageBox.Show("IP Address Not Valid");
+                FlexibleMessageBox.FONT = functions.setMessageBoxFont(Properties.Settings.Default.FontIndex);
+                FlexibleMessageBox.Show("IP Address Not Valid");
                 txtIP.Clear();
             }
         }
@@ -907,6 +973,12 @@ namespace ADB_Debloater
             {
                 e.Handled = true;
             }
+        }
+
+        private void btnCreateInstallScript_Click(object sender, EventArgs e)
+        {
+            frmCreateInstallScript createScript = new frmCreateInstallScript(cmbDevices.SelectedItem.ToString());
+            createScript.ShowDialog();
         }
     }
 }

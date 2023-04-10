@@ -1,13 +1,17 @@
-﻿using Microsoft.Win32;
+﻿using JR.Utils.GUI.Forms;
+using Microsoft.Win32;
 using OSVersionExtension;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Text;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,12 +26,20 @@ namespace ADB_Debloater
         }
 
         clsFunctions functions;
-        private string Configs = Directory.GetCurrentDirectory() + "\\Config";
+        private string Configs = Directory.GetCurrentDirectory() + "\\config";
+        private string Fonts = Directory.GetCurrentDirectory() + "\\fonts";
+        private string WorkDir = Directory.GetCurrentDirectory();
         private string Theme = "";
         private string NewTheme = "";
+        private string Font = "";
+        private string NewFont = "";
+
         private void FrmOptions_Load(object sender, EventArgs e)
         {
             functions = new clsFunctions();
+
+            Properties.Settings.Default.DialogShown = false;
+            Properties.Settings.Default.Save();
 
             if (Properties.Settings.Default.Theme == 0)
             {
@@ -43,6 +55,8 @@ namespace ADB_Debloater
             {
                 Theme = "Dark";
             }
+
+            Font = Properties.Settings.Default.Font;
 
             if (OSVersion.GetOSVersion().Version.Build >= 18362)
             {
@@ -68,16 +82,19 @@ namespace ADB_Debloater
 
             GetPackages();
 
-            ArrayList controls = new ArrayList();
-            controls.Add(lblStandard);
-            controls.Add(lblSWUpdate);
-            controls.Add(lblTheme);
-            controls.Add(lstStandard);
-            controls.Add(lstSWUpdate);
-            controls.Add(btnResetStandard);
-            controls.Add(btnResetSWUpdate);
-            controls.Add(btnSelectStandard);
-            controls.Add(btnSelectSWUpdate);
+            ArrayList controls = new ArrayList
+            {
+                lblStandard,
+                lblSWUpdate,
+                lblTheme,
+                lstStandard,
+                lstSWUpdate,
+                btnResetStandard,
+                btnResetSWUpdate,
+                btnSelectStandard,
+                btnSelectSWUpdate,
+                btnReset
+            };
 
             if (OSVersion.GetOSVersion().Version.Build < 18362)
             {
@@ -85,6 +102,30 @@ namespace ADB_Debloater
             }
 
             functions.SetTheme(this, controls);
+
+            if (File.Exists(WorkDir + @"\" + "fonts-config.ini"))
+            {
+                string[] lines = File.ReadAllLines(WorkDir + @"\" + "fonts-config.ini");
+                foreach (var line in lines)
+                {
+                    if (line != "")
+                    {
+                        string font = line.Remove(line.Length - 4);
+                        cmbFont.Items.Add(font);
+                    }
+                }
+            }
+
+            cmbFont.Items.Insert(0, "System Default");
+
+            cmbFont.SelectedItem = Properties.Settings.Default.Font;
+
+            ArrayList ctrls = new ArrayList
+            {
+                Controls
+            };
+
+            functions.setFont(this, Properties.Settings.Default.FontIndex, ctrls, null);
         }
 
         public void GetPackages()
@@ -133,7 +174,8 @@ namespace ADB_Debloater
 
         private void BtnResetStandard_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Standard Items will be Deleted", "Info!", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+            FlexibleMessageBox.FONT = functions.setMessageBoxFont(Properties.Settings.Default.FontIndex);
+            if (FlexibleMessageBox.Show("Standard Items will be Deleted", "Info!", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
             {
                 if (File.Exists(Configs + @"\" + "Standard.packageConfig"))
                 {
@@ -146,7 +188,8 @@ namespace ADB_Debloater
 
         private void BtnResetSWUpdate_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Software Update Items will be Deleted", "Info!", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+            FlexibleMessageBox.FONT = functions.setMessageBoxFont(Properties.Settings.Default.FontIndex);
+            if (FlexibleMessageBox.Show("Software Update Items will be Deleted", "Info!", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
             {
                 if (File.Exists(Configs + @"\" + "SoftUpd.packageConfig"))
                 {
@@ -201,9 +244,40 @@ namespace ADB_Debloater
                 NewTheme = "Dark";
             }
 
-            if (NewTheme != Theme)
+            NewFont = Properties.Settings.Default.Font;
+
+            if (NewTheme != Theme || NewFont != Font)
             {
-                MessageBox.Show("Any Changes Will Take Effect the next time ADB Debloater is started");
+                if (!Properties.Settings.Default.DialogShown)
+                {
+                    MessageBox.Show("Application will now Restart following changes made.");
+                    Properties.Settings.Default.DialogShown = true;
+                    Properties.Settings.Default.Save();
+                }
+               
+                Application.Restart();
+            }
+        }
+
+        private void cmbFont_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Font = cmbFont.SelectedItem.ToString();
+            Properties.Settings.Default.FontIndex = cmbFont.SelectedIndex;
+            Properties.Settings.Default.Save();
+
+            ArrayList ctrls = new ArrayList
+            {
+                Controls
+            };
+            functions.setFont(this, cmbFont.SelectedIndex, ctrls, null);
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            FlexibleMessageBox.FONT = functions.setMessageBoxFont(Properties.Settings.Default.FontIndex);
+            if (FlexibleMessageBox.Show("This Will Reset all Settings to Default. Do you Want to Continue?", "Warning!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Properties.Settings.Default.Reset();
             }
         }
     }

@@ -28,12 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnCreate = new System.Windows.Forms.Button();
             this.dgvApps = new System.Windows.Forms.DataGridView();
             this.Package = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Action = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.btnAllEnable = new System.Windows.Forms.Button();
+            this.btnAllDisable = new System.Windows.Forms.Button();
+            this.btnAllUninstall = new System.Windows.Forms.Button();
+            this.btnAllReinstall = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvApps)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,14 +61,14 @@
             this.dgvApps.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvApps.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvApps.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 7.854546F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvApps.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 7.854546F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvApps.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvApps.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvApps.ColumnHeadersVisible = false;
             this.dgvApps.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -77,14 +81,14 @@
             this.dgvApps.MultiSelect = false;
             this.dgvApps.Name = "dgvApps";
             this.dgvApps.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 7.854546F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvApps.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 7.854546F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvApps.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvApps.RowHeadersVisible = false;
             this.dgvApps.RowHeadersWidth = 47;
             this.dgvApps.RowTemplate.Height = 25;
@@ -113,15 +117,60 @@
             this.Action.Items.AddRange(new object[] {
             "Enable",
             "Disable",
-            "Uninstall"});
+            "Uninstall",
+            "Reinstall"});
             this.Action.MinimumWidth = 6;
             this.Action.Name = "Action";
             this.Action.Width = 95;
+            // 
+            // btnAllEnable
+            // 
+            this.btnAllEnable.Location = new System.Drawing.Point(13, 353);
+            this.btnAllEnable.Name = "btnAllEnable";
+            this.btnAllEnable.Size = new System.Drawing.Size(72, 18);
+            this.btnAllEnable.TabIndex = 15;
+            this.btnAllEnable.Text = "All Enable";
+            this.btnAllEnable.UseVisualStyleBackColor = true;
+            this.btnAllEnable.Click += new System.EventHandler(this.btnAllEnable_Click);
+            // 
+            // btnAllDisable
+            // 
+            this.btnAllDisable.Location = new System.Drawing.Point(91, 353);
+            this.btnAllDisable.Name = "btnAllDisable";
+            this.btnAllDisable.Size = new System.Drawing.Size(72, 18);
+            this.btnAllDisable.TabIndex = 16;
+            this.btnAllDisable.Text = "All Disable";
+            this.btnAllDisable.UseVisualStyleBackColor = true;
+            this.btnAllDisable.Click += new System.EventHandler(this.btnAllDisable_Click);
+            // 
+            // btnAllUninstall
+            // 
+            this.btnAllUninstall.Location = new System.Drawing.Point(321, 353);
+            this.btnAllUninstall.Name = "btnAllUninstall";
+            this.btnAllUninstall.Size = new System.Drawing.Size(72, 18);
+            this.btnAllUninstall.TabIndex = 17;
+            this.btnAllUninstall.Text = "All Uninstall";
+            this.btnAllUninstall.UseVisualStyleBackColor = true;
+            this.btnAllUninstall.Click += new System.EventHandler(this.btnAllUninstall_Click);
+            // 
+            // btnAllReinstall
+            // 
+            this.btnAllReinstall.Location = new System.Drawing.Point(399, 353);
+            this.btnAllReinstall.Name = "btnAllReinstall";
+            this.btnAllReinstall.Size = new System.Drawing.Size(72, 18);
+            this.btnAllReinstall.TabIndex = 18;
+            this.btnAllReinstall.Text = "All Reinstall";
+            this.btnAllReinstall.UseVisualStyleBackColor = true;
+            this.btnAllReinstall.Click += new System.EventHandler(this.btnAllReinstall_Click);
             // 
             // frmCreateScript
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(485, 386);
+            this.Controls.Add(this.btnAllReinstall);
+            this.Controls.Add(this.btnAllUninstall);
+            this.Controls.Add(this.btnAllDisable);
+            this.Controls.Add(this.btnAllEnable);
             this.Controls.Add(this.dgvApps);
             this.Controls.Add(this.btnCreate);
             this.Font = new System.Drawing.Font("Segoe UI", 7.854546F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -143,5 +192,9 @@
         private System.Windows.Forms.DataGridView dgvApps;
         private System.Windows.Forms.DataGridViewTextBoxColumn Package;
         private System.Windows.Forms.DataGridViewComboBoxColumn Action;
+        private System.Windows.Forms.Button btnAllEnable;
+        private System.Windows.Forms.Button btnAllDisable;
+        private System.Windows.Forms.Button btnAllUninstall;
+        private System.Windows.Forms.Button btnAllReinstall;
     }
 }
