@@ -1095,9 +1095,12 @@ namespace ADB_Debloater
                     {
                         if (c.Name.Contains("dgv"))
                         {
-                            foreach (DataGridViewColumn column in dgv.Columns)
+                            if (dgv != null)
                             {
-                                column.DefaultCellStyle.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular);
+                                foreach (DataGridViewColumn column in dgv.Columns)
+                                {
+                                    column.DefaultCellStyle.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular);
+                                }
                             }
                         }
                         else

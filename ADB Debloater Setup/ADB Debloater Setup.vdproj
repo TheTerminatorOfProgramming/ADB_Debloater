@@ -15,193 +15,223 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_036D7112F982427DA0CEDE87C2A881B6"
+        "MsmKey" = "8:_03625701AF594305A230F7BBFAA0C691"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_0EDD84F8904241D395D13623D66D0CFA"
+        "MsmKey" = "8:_04F74BF593984300A2D423AA7E8C56AC"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_1BE51D7502D447BFBC8A6243696CAF79"
+        "MsmKey" = "8:_117572D2271644D3A8AEAD462C787D51"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_1C7972897BE943898E2610B0043DE2C6"
+        "MsmKey" = "8:_1C03AF2D80394353863B1A84B9411A0F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_20D1A92283704C5EBE42E13C6496C84B"
+        "MsmKey" = "8:_1E9BF7DB44DC461BB2A43AE2CE1DA886"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_27D8C22E8BE542799E49DABF47DD5C46"
+        "MsmKey" = "8:_1F3AA8EAB5A54CAD8BB92EBBD5ED887B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_29688678F4F648A8BDA66B855AB0EA8C"
+        "MsmKey" = "8:_24678B01DC214FD88F5BCACDF9FEE5B7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_335E4103BF5E4F489875654967EFA076"
+        "MsmKey" = "8:_294F90C8497347AB90673A3430C0CB70"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_4B3A905721894623884D9A226782B87C"
+        "MsmKey" = "8:_3306414B4A29459A9805010BDA6C8052"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_4EA34D6E237647BA946C44804A193D24"
+        "MsmKey" = "8:_3495E5A76AD44DC4AF5742330975C510"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_5A4F5A97EA0442FFB8C9C41FAE92BA8D"
+        "MsmKey" = "8:_41D438A9440B49C994CC89AF6D9E3B81"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_5C93916771F64CFEAFC707F83F066249"
+        "MsmKey" = "8:_4348313FC10A46EF84B0DD842DD2A77E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_476EBD4293074D66A7E0779B550EFF15"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_4E0682D8749642B8AEDEF6884343AEDD"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_571823A664914828A7B4A6994E907220"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5A1FBA978AB24F3681ABEA41CAF463C4"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_5E3AD5BCB3E04DBADA9F93244D8217C3"
-        "OwnerKey" = "8:_1BE51D7502D447BFBC8A6243696CAF79"
+        "OwnerKey" = "8:_1F3AA8EAB5A54CAD8BB92EBBD5ED887B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_5E3AD5BCB3E04DBADA9F93244D8217C3"
-        "OwnerKey" = "8:_76323FD929574577B13A37825AE85991"
+        "OwnerKey" = "8:_699C914C9F4D4EC49027162DBD694D73"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_60528C7C3904802C3B1581F907963620"
-        "OwnerKey" = "8:_1BE51D7502D447BFBC8A6243696CAF79"
+        "OwnerKey" = "8:_1F3AA8EAB5A54CAD8BB92EBBD5ED887B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_6FAD76A6FE40408DAF2D5A8B568E1E89"
+        "MsmKey" = "8:_619AF055BDEA4D39AEF5E0F656AEEEC9"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_76323FD929574577B13A37825AE85991"
+        "MsmKey" = "8:_66C5A348532F4FEDB6F541FD07A6670A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_7EBA1D736B6C4DCF9D953E1DD39C5CFB"
+        "MsmKey" = "8:_699C914C9F4D4EC49027162DBD694D73"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_82D069E19D23460DAA6D20CF6BA29011"
+        "MsmKey" = "8:_7176D3A613824CC4A42F4E8FF5792769"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_841D9AC5E17948479DC389E717749088"
+        "MsmKey" = "8:_A250062EFE4F468E82C1063F932A04C2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_99D8395E16A24E06A6BEA009F970FCAB"
+        "MsmKey" = "8:_A263BC5978794F4692EA83E424BC068B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_A2FBF0BF606749E881FDFCDABEADA1AD"
+        "MsmKey" = "8:_A3643380C04A44D399B8B47E6922F3B5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_B52AA9E03F104A63987FE550CF06AB25"
+        "MsmKey" = "8:_A508D9A4FC89470397C3F10DBE44D0DD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_B977471797E94A4F9CE6786F7F3A840A"
+        "MsmKey" = "8:_A9A4AEECEB984282A8637BBF71BB46D6"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_B9F0F214A67040D3BB8A76679F35A24F"
+        "MsmKey" = "8:_ACB99A6C04E4459B8156BE6B79ACE9EE"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_BE2D70A900894500B41389746037EA85"
+        "MsmKey" = "8:_B289B09A8F764090A5C4B9B5D1780319"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_CE592B93535F4FB1AD2AD0EEE1715C17"
+        "MsmKey" = "8:_B4FCA9BE34D8471EA60D9CCDBD84BAE3"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_D2DE050CB81A464EB914352D3DA0D00A"
+        "MsmKey" = "8:_C07978B15254450EB5EC0309C50A4C72"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_DB23C4D29B874A008032B31E27CF692E"
+        "MsmKey" = "8:_C6F8ADF169124778AE8B0B58C6F22B27"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_DD02D1BCC760406A8A290F3B9F809A84"
+        "MsmKey" = "8:_DD4567244F854B6FBDBA42B3AFA175CE"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_E6FAE58A305B418A96EC030DC068754E"
+        "MsmKey" = "8:_E2D3F6ADAD62433BA751AB886A197F4A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_FA342BD341BE4241B1B44DC1CE98704D"
+        "MsmKey" = "8:_E8F3323B616D4B8898EDCD1B953B9179"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F199F791C642406D81F8308E24DFFF31"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -214,13 +244,25 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_76323FD929574577B13A37825AE85991"
+        "OwnerKey" = "8:_B289B09A8F764090A5C4B9B5D1780319"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_1BE51D7502D447BFBC8A6243696CAF79"
+        "OwnerKey" = "8:_699C914C9F4D4EC49027162DBD694D73"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_A9A4AEECEB984282A8637BBF71BB46D6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_1F3AA8EAB5A54CAD8BB92EBBD5ED887B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -324,12 +366,12 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_036D7112F982427DA0CEDE87C2A881B6"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_03625701AF594305A230F7BBFAA0C691"
             {
-            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\temp\\Images\\Blank\\blank.png"
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\Temp\\Images\\Blank\\blank.png"
             "TargetName" = "8:blank.png"
             "Tag" = "8:"
-            "Folder" = "8:_32A7C8C61C96469486EDD964D10B7B85"
+            "Folder" = "8:_85995467A2EF4FA6A6E4636FB7FB0E53"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -344,12 +386,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0EDD84F8904241D395D13623D66D0CFA"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_04F74BF593984300A2D423AA7E8C56AC"
             {
-            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\fonts\\Pencil.ttf"
-            "TargetName" = "8:Pencil.ttf"
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\Tools\\ADB\\make_f2fs_casefold.exe"
+            "TargetName" = "8:make_f2fs_casefold.exe"
             "Tag" = "8:"
-            "Folder" = "8:_5F07794E5F48435084AE58FEDE78CFE7"
+            "Folder" = "8:_CA96B0F03DB94A099040A8872BD7CF2E"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -364,14 +406,74 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1BE51D7502D447BFBC8A6243696CAF79"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_117572D2271644D3A8AEAD462C787D51"
+            {
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\Tools\\ADB\\dmtracedump.exe"
+            "TargetName" = "8:dmtracedump.exe"
+            "Tag" = "8:"
+            "Folder" = "8:_CA96B0F03DB94A099040A8872BD7CF2E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1C03AF2D80394353863B1A84B9411A0F"
+            {
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\Tools\\ADB\\mke2fs.exe"
+            "TargetName" = "8:mke2fs.exe"
+            "Tag" = "8:"
+            "Folder" = "8:_CA96B0F03DB94A099040A8872BD7CF2E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1E9BF7DB44DC461BB2A43AE2CE1DA886"
+            {
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\Tools\\ADB\\make_f2fs.exe"
+            "TargetName" = "8:make_f2fs.exe"
+            "Tag" = "8:"
+            "Folder" = "8:_CA96B0F03DB94A099040A8872BD7CF2E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1F3AA8EAB5A54CAD8BB92EBBD5ED887B"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:ADB Debloater, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:ADB Debloater, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_1BE51D7502D447BFBC8A6243696CAF79"
+                    "_1F3AA8EAB5A54CAD8BB92EBBD5ED887B"
                     {
                     "Name" = "8:ADB Debloater.exe"
                     "Attributes" = "3:512"
@@ -395,12 +497,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1C7972897BE943898E2610B0043DE2C6"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_24678B01DC214FD88F5BCACDF9FEE5B7"
             {
-            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\fonts\\Samsung Sharp Sans.ttf"
-            "TargetName" = "8:Samsung Sharp Sans.ttf"
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\fonts\\MADE Evolve Sans EVO.ttf"
+            "TargetName" = "8:MADE Evolve Sans EVO.ttf"
             "Tag" = "8:"
-            "Folder" = "8:_5F07794E5F48435084AE58FEDE78CFE7"
+            "Folder" = "8:_D70A7BED01EA4731A7DCF722D1D71909"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -415,12 +517,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_20D1A92283704C5EBE42E13C6496C84B"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_294F90C8497347AB90673A3430C0CB70"
             {
-            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\tools\\ADB\\dmtracedump.exe"
-            "TargetName" = "8:dmtracedump.exe"
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\Tools\\ADB\\adb.exe"
+            "TargetName" = "8:adb.exe"
             "Tag" = "8:"
-            "Folder" = "8:_4DDADA5461E44E378F3458D69C46F1C6"
+            "Folder" = "8:_CA96B0F03DB94A099040A8872BD7CF2E"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -435,10 +537,90 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_27D8C22E8BE542799E49DABF47DD5C46"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3306414B4A29459A9805010BDA6C8052"
             {
-            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\fonts-config.ini"
-            "TargetName" = "8:fonts-config.ini"
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\fonts\\Oxanium Regular.ttf"
+            "TargetName" = "8:Oxanium Regular.ttf"
+            "Tag" = "8:"
+            "Folder" = "8:_D70A7BED01EA4731A7DCF722D1D71909"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3495E5A76AD44DC4AF5742330975C510"
+            {
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\Tools\\ADB\\libwinpthread-1.dll"
+            "TargetName" = "8:libwinpthread-1.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_CA96B0F03DB94A099040A8872BD7CF2E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_41D438A9440B49C994CC89AF6D9E3B81"
+            {
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\Tools\\ADB\\source.properties"
+            "TargetName" = "8:source.properties"
+            "Tag" = "8:"
+            "Folder" = "8:_CA96B0F03DB94A099040A8872BD7CF2E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4348313FC10A46EF84B0DD842DD2A77E"
+            {
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\fonts\\Samsung Sans.ttf"
+            "TargetName" = "8:Samsung Sans.ttf"
+            "Tag" = "8:"
+            "Folder" = "8:_D70A7BED01EA4731A7DCF722D1D71909"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_476EBD4293074D66A7E0779B550EFF15"
+            {
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\ADB Debloater.pdb"
+            "TargetName" = "8:ADB Debloater.pdb"
             "Tag" = "8:"
             "Folder" = "8:_E6CE9C5DA77843189E92181554B4B9F2"
             "Condition" = "8:"
@@ -455,12 +637,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_29688678F4F648A8BDA66B855AB0EA8C"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4E0682D8749642B8AEDEF6884343AEDD"
             {
-            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\fonts\\Bauhaus ITC.ttf"
-            "TargetName" = "8:Bauhaus ITC.ttf"
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\ADB Debloater.exe.config"
+            "TargetName" = "8:ADB Debloater.exe.config"
             "Tag" = "8:"
-            "Folder" = "8:_5F07794E5F48435084AE58FEDE78CFE7"
+            "Folder" = "8:_E6CE9C5DA77843189E92181554B4B9F2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -475,92 +657,32 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_335E4103BF5E4F489875654967EFA076"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_571823A664914828A7B4A6994E907220"
             {
-            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\tools\\ADB\\NOTICE.txt"
-            "TargetName" = "8:NOTICE.txt"
-            "Tag" = "8:"
-            "Folder" = "8:_4DDADA5461E44E378F3458D69C46F1C6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4B3A905721894623884D9A226782B87C"
-            {
-            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\tools\\ADB\\etc1tool.exe"
-            "TargetName" = "8:etc1tool.exe"
-            "Tag" = "8:"
-            "Folder" = "8:_4DDADA5461E44E378F3458D69C46F1C6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4EA34D6E237647BA946C44804A193D24"
-            {
-            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\fonts\\Google Sans.ttf"
-            "TargetName" = "8:Google Sans.ttf"
-            "Tag" = "8:"
-            "Folder" = "8:_5F07794E5F48435084AE58FEDE78CFE7"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5A4F5A97EA0442FFB8C9C41FAE92BA8D"
-            {
-            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\tools\\ADB\\make_f2fs_casefold.exe"
-            "TargetName" = "8:make_f2fs_casefold.exe"
-            "Tag" = "8:"
-            "Folder" = "8:_4DDADA5461E44E378F3458D69C46F1C6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5C93916771F64CFEAFC707F83F066249"
-            {
-            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\tools\\ADB\\sqlite3.exe"
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\Tools\\ADB\\sqlite3.exe"
             "TargetName" = "8:sqlite3.exe"
             "Tag" = "8:"
-            "Folder" = "8:_4DDADA5461E44E378F3458D69C46F1C6"
+            "Folder" = "8:_CA96B0F03DB94A099040A8872BD7CF2E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5A1FBA978AB24F3681ABEA41CAF463C4"
+            {
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\fonts\\Pencil.ttf"
+            "TargetName" = "8:Pencil.ttf"
+            "Tag" = "8:"
+            "Folder" = "8:_D70A7BED01EA4731A7DCF722D1D71909"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -637,12 +759,12 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6FAD76A6FE40408DAF2D5A8B568E1E89"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_619AF055BDEA4D39AEF5E0F656AEEEC9"
             {
-            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\fonts\\Pixelato 2.ttf"
-            "TargetName" = "8:Pixelato 2.ttf"
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\Tools\\ADB\\AdbWinApi.dll"
+            "TargetName" = "8:AdbWinApi.dll"
             "Tag" = "8:"
-            "Folder" = "8:_5F07794E5F48435084AE58FEDE78CFE7"
+            "Folder" = "8:_CA96B0F03DB94A099040A8872BD7CF2E"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -657,14 +779,34 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_76323FD929574577B13A37825AE85991"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_66C5A348532F4FEDB6F541FD07A6670A"
+            {
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\fonts\\Samsung Sharp Sans.ttf"
+            "TargetName" = "8:Samsung Sharp Sans.ttf"
+            "Tag" = "8:"
+            "Folder" = "8:_D70A7BED01EA4731A7DCF722D1D71909"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_699C914C9F4D4EC49027162DBD694D73"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_76323FD929574577B13A37825AE85991"
+                    "_699C914C9F4D4EC49027162DBD694D73"
                     {
                     "Name" = "8:MetroFramework.Fonts.dll"
                     "Attributes" = "3:512"
@@ -688,7 +830,27 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7EBA1D736B6C4DCF9D953E1DD39C5CFB"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7176D3A613824CC4A42F4E8FF5792769"
+            {
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\Tools\\ADB\\mke2fs.conf"
+            "TargetName" = "8:mke2fs.conf"
+            "Tag" = "8:"
+            "Folder" = "8:_CA96B0F03DB94A099040A8872BD7CF2E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A250062EFE4F468E82C1063F932A04C2"
             {
             "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\icon.ico"
             "TargetName" = "8:icon.ico"
@@ -708,12 +870,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_82D069E19D23460DAA6D20CF6BA29011"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A263BC5978794F4692EA83E424BC068B"
             {
-            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\apk\\AdbDebloat.apk"
-            "TargetName" = "8:AdbDebloat.apk"
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\fonts\\Pixelato 2.ttf"
+            "TargetName" = "8:Pixelato 2.ttf"
             "Tag" = "8:"
-            "Folder" = "8:_D8808147757B4EDAA40E7061337061E0"
+            "Folder" = "8:_D70A7BED01EA4731A7DCF722D1D71909"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -728,12 +890,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_841D9AC5E17948479DC389E717749088"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A3643380C04A44D399B8B47E6922F3B5"
             {
-            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\tools\\ADB\\adb.exe"
-            "TargetName" = "8:adb.exe"
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\APK\\saves\\com.monotype.android.font.samsungsans.apk"
+            "TargetName" = "8:com.monotype.android.font.samsungsans.apk"
             "Tag" = "8:"
-            "Folder" = "8:_4DDADA5461E44E378F3458D69C46F1C6"
+            "Folder" = "8:_27041A1C4B6E498F9136D77C4FA919B3"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -748,12 +910,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_99D8395E16A24E06A6BEA009F970FCAB"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A508D9A4FC89470397C3F10DBE44D0DD"
             {
-            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\tools\\ADB\\mke2fs.exe"
-            "TargetName" = "8:mke2fs.exe"
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\fonts\\Google Sans.ttf"
+            "TargetName" = "8:Google Sans.ttf"
             "Tag" = "8:"
-            "Folder" = "8:_4DDADA5461E44E378F3458D69C46F1C6"
+            "Folder" = "8:_D70A7BED01EA4731A7DCF722D1D71909"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -768,12 +930,23 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A2FBF0BF606749E881FDFCDABEADA1AD"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A9A4AEECEB984282A8637BBF71BB46D6"
             {
-            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\tools\\ADB\\mke2fs.conf"
-            "TargetName" = "8:mke2fs.conf"
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_A9A4AEECEB984282A8637BBF71BB46D6"
+                    {
+                    "Name" = "8:MetroFramework.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\MetroFramework.dll"
+            "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_4DDADA5461E44E378F3458D69C46F1C6"
+            "Folder" = "8:_E6CE9C5DA77843189E92181554B4B9F2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -788,12 +961,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B52AA9E03F104A63987FE550CF06AB25"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_ACB99A6C04E4459B8156BE6B79ACE9EE"
             {
-            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\tools\\ADB\\fastboot.exe"
-            "TargetName" = "8:fastboot.exe"
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\fonts-config.ini"
+            "TargetName" = "8:fonts-config.ini"
             "Tag" = "8:"
-            "Folder" = "8:_4DDADA5461E44E378F3458D69C46F1C6"
+            "Folder" = "8:_E6CE9C5DA77843189E92181554B4B9F2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -808,12 +981,23 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B977471797E94A4F9CE6786F7F3A840A"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B289B09A8F764090A5C4B9B5D1780319"
             {
-            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\fonts\\Oxanium Regular.ttf"
-            "TargetName" = "8:Oxanium Regular.ttf"
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:OSVersionExt, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_B289B09A8F764090A5C4B9B5D1780319"
+                    {
+                    "Name" = "8:OSVersionExt.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\OSVersionExt.dll"
+            "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_5F07794E5F48435084AE58FEDE78CFE7"
+            "Folder" = "8:_E6CE9C5DA77843189E92181554B4B9F2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -828,92 +1012,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B9F0F214A67040D3BB8A76679F35A24F"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B4FCA9BE34D8471EA60D9CCDBD84BAE3"
             {
-            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\fonts\\Samsung Sans.ttf"
-            "TargetName" = "8:Samsung Sans.ttf"
-            "Tag" = "8:"
-            "Folder" = "8:_5F07794E5F48435084AE58FEDE78CFE7"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BE2D70A900894500B41389746037EA85"
-            {
-            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\tools\\ADB\\libwinpthread-1.dll"
-            "TargetName" = "8:libwinpthread-1.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_4DDADA5461E44E378F3458D69C46F1C6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CE592B93535F4FB1AD2AD0EEE1715C17"
-            {
-            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\tools\\ADB\\hprof-conv.exe"
-            "TargetName" = "8:hprof-conv.exe"
-            "Tag" = "8:"
-            "Folder" = "8:_4DDADA5461E44E378F3458D69C46F1C6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D2DE050CB81A464EB914352D3DA0D00A"
-            {
-            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\tools\\ADB\\source.properties"
-            "TargetName" = "8:source.properties"
-            "Tag" = "8:"
-            "Folder" = "8:_4DDADA5461E44E378F3458D69C46F1C6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DB23C4D29B874A008032B31E27CF692E"
-            {
-            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\tools\\ADB\\AdbWinUsbApi.dll"
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\Tools\\ADB\\AdbWinUsbApi.dll"
             "TargetName" = "8:AdbWinUsbApi.dll"
             "Tag" = "8:"
-            "Folder" = "8:_4DDADA5461E44E378F3458D69C46F1C6"
+            "Folder" = "8:_CA96B0F03DB94A099040A8872BD7CF2E"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -928,12 +1032,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DD02D1BCC760406A8A290F3B9F809A84"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C07978B15254450EB5EC0309C50A4C72"
             {
-            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\tools\\ADB\\AdbWinApi.dll"
-            "TargetName" = "8:AdbWinApi.dll"
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\Tools\\ADB\\etc1tool.exe"
+            "TargetName" = "8:etc1tool.exe"
             "Tag" = "8:"
-            "Folder" = "8:_4DDADA5461E44E378F3458D69C46F1C6"
+            "Folder" = "8:_CA96B0F03DB94A099040A8872BD7CF2E"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -948,12 +1052,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E6FAE58A305B418A96EC030DC068754E"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C6F8ADF169124778AE8B0B58C6F22B27"
             {
-            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\tools\\ADB\\make_f2fs.exe"
-            "TargetName" = "8:make_f2fs.exe"
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\Tools\\ADB\\fastboot.exe"
+            "TargetName" = "8:fastboot.exe"
             "Tag" = "8:"
-            "Folder" = "8:_4DDADA5461E44E378F3458D69C46F1C6"
+            "Folder" = "8:_CA96B0F03DB94A099040A8872BD7CF2E"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -968,12 +1072,72 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FA342BD341BE4241B1B44DC1CE98704D"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DD4567244F854B6FBDBA42B3AFA175CE"
             {
-            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\fonts\\MADE Evolve Sans EVO.ttf"
-            "TargetName" = "8:MADE Evolve Sans EVO.ttf"
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\Tools\\ADB\\NOTICE.txt"
+            "TargetName" = "8:NOTICE.txt"
             "Tag" = "8:"
-            "Folder" = "8:_5F07794E5F48435084AE58FEDE78CFE7"
+            "Folder" = "8:_CA96B0F03DB94A099040A8872BD7CF2E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E2D3F6ADAD62433BA751AB886A197F4A"
+            {
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\fonts\\Bauhaus ITC.ttf"
+            "TargetName" = "8:Bauhaus ITC.ttf"
+            "Tag" = "8:"
+            "Folder" = "8:_D70A7BED01EA4731A7DCF722D1D71909"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E8F3323B616D4B8898EDCD1B953B9179"
+            {
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\Tools\\ADB\\hprof-conv.exe"
+            "TargetName" = "8:hprof-conv.exe"
+            "Tag" = "8:"
+            "Folder" = "8:_CA96B0F03DB94A099040A8872BD7CF2E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F199F791C642406D81F8308E24DFFF31"
+            {
+            "SourcePath" = "8:..\\ADB Debloater\\bin\\Release\\APK\\AdbDebloat.apk"
+            "TargetName" = "8:AdbDebloat.apk"
+            "Tag" = "8:"
+            "Folder" = "8:_A3A0A25DE3DC4BF39239C64C70FCD97C"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1026,64 +1190,31 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_088CFA1680C84850893D61B514E24AE0"
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_6D51BA6B23C4483D9FA62CE219DAA5B7"
                     {
-                    "Name" = "8:tools"
+                    "Name" = "8:Temp"
                     "AlwaysCreate" = "11:FALSE"
                     "Condition" = "8:"
                     "Transitive" = "11:FALSE"
-                    "Property" = "8:_88D37E0D95A84F3DA275825295298403"
+                    "Property" = "8:_1248DA9D10FD49D38B9B1C136E4AD2FB"
                         "Folders"
                         {
-                            "{9EF0B969-E518-4E46-987F-47570745A589}:_4DDADA5461E44E378F3458D69C46F1C6"
-                            {
-                            "Name" = "8:ADB"
-                            "AlwaysCreate" = "11:FALSE"
-                            "Condition" = "8:"
-                            "Transitive" = "11:FALSE"
-                            "Property" = "8:_F0FAE48F45304B2A9AB829F8AF4D7767"
-                                "Folders"
-                                {
-                                }
-                            }
-                        }
-                    }
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_5F07794E5F48435084AE58FEDE78CFE7"
-                    {
-                    "Name" = "8:fonts"
-                    "AlwaysCreate" = "11:FALSE"
-                    "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
-                    "Property" = "8:_32303554BDAB4083BAA50C95730C818B"
-                        "Folders"
-                        {
-                        }
-                    }
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_BF75492824144F6DB980A07D774A0FA9"
-                    {
-                    "Name" = "8:temp"
-                    "AlwaysCreate" = "11:FALSE"
-                    "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
-                    "Property" = "8:_F52816BD7019470FACE83F1A093E983B"
-                        "Folders"
-                        {
-                            "{9EF0B969-E518-4E46-987F-47570745A589}:_8BC9D78F018A4E29B1B7D6E4329BAF04"
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_D565C79D2A9347499E1D0E27A2A159E3"
                             {
                             "Name" = "8:Images"
                             "AlwaysCreate" = "11:FALSE"
                             "Condition" = "8:"
                             "Transitive" = "11:FALSE"
-                            "Property" = "8:_4F28C2CF8756486C93083B63695FF8ED"
+                            "Property" = "8:_69D20CFD762E49AABD0FA7CF38437730"
                                 "Folders"
                                 {
-                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_32A7C8C61C96469486EDD964D10B7B85"
+                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_85995467A2EF4FA6A6E4636FB7FB0E53"
                                     {
                                     "Name" = "8:Blank"
                                     "AlwaysCreate" = "11:FALSE"
                                     "Condition" = "8:"
                                     "Transitive" = "11:FALSE"
-                                    "Property" = "8:_6852B05E032745D4ACE5137A010301C9"
+                                    "Property" = "8:_B7EE000936E8433EADA42ACE608CAB5D"
                                         "Folders"
                                         {
                                         }
@@ -1092,26 +1223,59 @@
                             }
                         }
                     }
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_D8808147757B4EDAA40E7061337061E0"
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_A3A0A25DE3DC4BF39239C64C70FCD97C"
                     {
-                    "Name" = "8:apk"
+                    "Name" = "8:APK"
                     "AlwaysCreate" = "11:FALSE"
                     "Condition" = "8:"
                     "Transitive" = "11:FALSE"
-                    "Property" = "8:_C68877301CE446668DC6445C1B80D813"
+                    "Property" = "8:_D7BDD2F8B77D47B39D13B5D24D2071B1"
                         "Folders"
                         {
-                            "{9EF0B969-E518-4E46-987F-47570745A589}:_381909E9F0F64EFEB6F7D09D17D7E6F8"
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_27041A1C4B6E498F9136D77C4FA919B3"
                             {
                             "Name" = "8:saves"
                             "AlwaysCreate" = "11:FALSE"
                             "Condition" = "8:"
                             "Transitive" = "11:FALSE"
-                            "Property" = "8:_BEB30E6417B64DF78B8FB67B5F027BA0"
+                            "Property" = "8:_042FE61AC3B5405E88FFE2EB22D71F45"
                                 "Folders"
                                 {
                                 }
                             }
+                        }
+                    }
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_AA46A4455E83414586C4C691AA55C061"
+                    {
+                    "Name" = "8:Tools"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_ADA96E2C23BB4F71873480B5A5E3ED3C"
+                        "Folders"
+                        {
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_CA96B0F03DB94A099040A8872BD7CF2E"
+                            {
+                            "Name" = "8:ADB"
+                            "AlwaysCreate" = "11:FALSE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_10737775AEED46928C29564705CF96C1"
+                                "Folders"
+                                {
+                                }
+                            }
+                        }
+                    }
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_D70A7BED01EA4731A7DCF722D1D71909"
+                    {
+                    "Name" = "8:fonts"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_9DEE299755834676B15E2E284104740C"
+                        "Folders"
+                        {
                         }
                     }
                 }
@@ -1132,15 +1296,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ADB Debloater"
-        "ProductCode" = "8:{3722732B-0F7D-440B-8883-D193CACCCB13}"
-        "PackageCode" = "8:{3D85C73F-1557-4808-9131-B893FDA71858}"
+        "ProductCode" = "8:{BFB616DA-6B9B-42FE-BBB5-50A2EDCB7F24}"
+        "PackageCode" = "8:{808747AF-E497-4E3E-8162-AD54F223AD69}"
         "UpgradeCode" = "8:{572AE56C-E8ED-4D2E-98C3-02AC0FC4E516}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.4.0"
+        "ProductVersion" = "8:1.4.1"
         "Manufacturer" = "8:TTOP"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -1150,7 +1314,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:https://theterminatorofprogramming.github.io/"
-        "ARPPRODUCTICON" = "8:_7EBA1D736B6C4DCF9D953E1DD39C5CFB"
+        "ARPPRODUCTICON" = "8:_A250062EFE4F468E82C1063F932A04C2"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -1253,18 +1417,18 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_B4005190B6994D12865181330AD09808"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_255B14D2C58F4EDAA7ACBCD19B4C960C"
             {
-            "Name" = "8:ADB Debloater.exe"
+            "Name" = "8:ADB Debloater"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_1BE51D7502D447BFBC8A6243696CAF79"
+            "Target" = "8:_1F3AA8EAB5A54CAD8BB92EBBD5ED887B"
             "Folder" = "8:_96C0021621C248F4BF695977E1DA4D09"
             "WorkingFolder" = "8:_E6CE9C5DA77843189E92181554B4B9F2"
-            "Icon" = "8:_7EBA1D736B6C4DCF9D953E1DD39C5CFB"
+            "Icon" = "8:_A250062EFE4F468E82C1063F932A04C2"
             "Feature" = "8:"
             }
         }

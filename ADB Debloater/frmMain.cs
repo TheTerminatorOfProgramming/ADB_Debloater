@@ -361,7 +361,14 @@ namespace ADB_Debloater
         private void BtnExport_Click(object sender, EventArgs e)
         {
             frmListConfirm confirm = new frmListConfirm(edited, cmbDevices.Text);
-            confirm.ShowDialog();
+            if (edited.Count > 0)
+            {
+                confirm.ShowDialog();
+            }else
+            {
+                MessageBox.Show("No Packages Have been Edited!");
+            }
+            
         }
 
         private void BtnImport_Click(object sender, EventArgs e)
@@ -424,12 +431,25 @@ namespace ADB_Debloater
 
         private void BtnReinstall_Click(object sender, EventArgs e)
         {
-            ArrayList multiChoice = new ArrayList
+            ArrayList multiChoice;
+            if (edited.Count > 0)
+            {
+                multiChoice = new ArrayList
             {
                 "Choose From Current Session",
                 "Manually Input Package Name",
                 "From File"
             };
+            }
+            else
+            {
+                multiChoice = new ArrayList
+            {
+                "Manually Input Package Name",
+                "From File"
+            };
+            }
+
 
             if (ShowComboDialog(multiChoice, "Select How to Reinstall Package") == DialogResult.OK)
             {
@@ -452,7 +472,7 @@ namespace ADB_Debloater
                         FlexibleMessageBox.Show("No Packages Available to Reinstall");
                     }
                 }
-                if (GetComboValue() == "Choose From Current Session")
+                if (GetComboValue() == "Manually Input Package Name")
                 {
                     string input = "";
                     if (ShowInputDialog(ref input, "Input Package Name!") == DialogResult.OK)

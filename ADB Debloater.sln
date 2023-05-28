@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADB Debloater", "ADB Debloater\ADB Debloater.csproj", "{078BED92-5D96-49F7-B06A-B0A9D78750F0}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ADB Debloater Setup", "ADB Debloater Setup\ADB Debloater Setup.vdproj", "{80120AEE-BEF2-40CB-BB80-E880FC4D9BB0}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ADB Debloater Setup", "ADB Debloater Setup\ADB Debloater Setup.vdproj", "{18460E20-5812-43B4-830F-CD8C55F806FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,12 +23,14 @@ Global
 		{078BED92-5D96-49F7-B06A-B0A9D78750F0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{078BED92-5D96-49F7-B06A-B0A9D78750F0}.Release|x64.ActiveCfg = Release|Any CPU
 		{078BED92-5D96-49F7-B06A-B0A9D78750F0}.Release|x64.Build.0 = Release|Any CPU
-		{80120AEE-BEF2-40CB-BB80-E880FC4D9BB0}.Debug|Any CPU.ActiveCfg = Debug
-		{80120AEE-BEF2-40CB-BB80-E880FC4D9BB0}.Debug|x64.ActiveCfg = Debug
-		{80120AEE-BEF2-40CB-BB80-E880FC4D9BB0}.Debug|x64.Build.0 = Debug
-		{80120AEE-BEF2-40CB-BB80-E880FC4D9BB0}.Release|Any CPU.ActiveCfg = Release
-		{80120AEE-BEF2-40CB-BB80-E880FC4D9BB0}.Release|x64.ActiveCfg = Release
-		{80120AEE-BEF2-40CB-BB80-E880FC4D9BB0}.Release|x64.Build.0 = Release
+		{18460E20-5812-43B4-830F-CD8C55F806FA}.Debug|Any CPU.ActiveCfg = Debug
+		{18460E20-5812-43B4-830F-CD8C55F806FA}.Debug|Any CPU.Build.0 = Debug
+		{18460E20-5812-43B4-830F-CD8C55F806FA}.Debug|x64.ActiveCfg = Debug
+		{18460E20-5812-43B4-830F-CD8C55F806FA}.Debug|x64.Build.0 = Debug
+		{18460E20-5812-43B4-830F-CD8C55F806FA}.Release|Any CPU.ActiveCfg = Release
+		{18460E20-5812-43B4-830F-CD8C55F806FA}.Release|Any CPU.Build.0 = Release
+		{18460E20-5812-43B4-830F-CD8C55F806FA}.Release|x64.ActiveCfg = Release
+		{18460E20-5812-43B4-830F-CD8C55F806FA}.Release|x64.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
