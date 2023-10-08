@@ -13,6 +13,7 @@ using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using JR.Utils.GUI.Forms;
+using System.Security;
 
 namespace ADB_Debloater
 {
@@ -38,11 +39,9 @@ namespace ADB_Debloater
         string SdPercent = "";
         private List<string> tempApps = new List<string>();
         private Button refresh = Application.OpenForms["frmMain"].Controls.Find("btnReloadDevice", true)[0] as Button;
-        private Label packagecount = Application.OpenForms["frmMain"].Controls.Find("lblPackageCount", true)[0] as Label;
+        private StatusStrip status = Application.OpenForms["frmMain"].Controls.Find("ssStatus", true)[0] as StatusStrip;
         private Label deviceconnected = Application.OpenForms["frmMain"].Controls.Find("lblConnectedStatus", true)[0] as Label;
-        private TextBox search = Application.OpenForms["frmMain"].Controls.Find("txtSearch", true)[0] as TextBox;
         private DataGridView dgv = Application.OpenForms["frmMain"].Controls.Find("dgvApps", true)[0] as DataGridView;     
-        private ComboBox searchquery = Application.OpenForms["frmMain"].Controls.Find("cmbSearchCriteria", true)[0] as ComboBox;
         PrivateFontCollection pfc = new PrivateFontCollection();
         public string GetName()
         {
@@ -192,6 +191,18 @@ namespace ADB_Debloater
                         c.BackColor = Color.White;
                         c.ForeColor = Color.Black;
                     }
+
+                    if (c is StatusStrip)
+                    {
+                        c.BackColor = Color.White;
+                        c.ForeColor = Color.Black;
+                    }
+
+                    if (c is StatusStrip)
+                    {
+                        c.BackColor = Color.White;
+                        c.ForeColor = Color.Black;
+                    }
                 }
             }
 
@@ -224,6 +235,12 @@ namespace ADB_Debloater
                     }
 
                     if (c is GroupBox)
+                    {
+                        c.BackColor = Color.FromArgb(56, 56, 56);
+                        c.ForeColor = Color.White;
+                    }
+
+                    if (c is StatusStrip)
                     {
                         c.BackColor = Color.FromArgb(56, 56, 56);
                         c.ForeColor = Color.White;
@@ -273,6 +290,12 @@ namespace ADB_Debloater
                                         c.BackColor = Color.FromArgb(56, 56, 56);
                                         c.ForeColor = Color.White;
                                     }
+
+                                    if (c is StatusStrip)
+                                    {
+                                        c.BackColor = Color.FromArgb(56, 56, 56);
+                                        c.ForeColor = Color.White;
+                                    }
                                 }
                             }
                             else
@@ -304,6 +327,12 @@ namespace ADB_Debloater
                                     }
 
                                     if (c is GroupBox)
+                                    {
+                                        c.BackColor = Color.White;
+                                        c.ForeColor = Color.Black;
+                                    }
+
+                                    if (c is StatusStrip)
                                     {
                                         c.BackColor = Color.White;
                                         c.ForeColor = Color.Black;
@@ -876,6 +905,8 @@ namespace ADB_Debloater
 
         public void GetApps(DataTable dt)
         {
+            ToolStripLabel packagecount = status.Items.Find("lblPackageCount", true)[0] as ToolStripLabel;
+            ToolStripTextBox search = status.Items.Find("txtSearch", true)[0] as ToolStripTextBox;
             dt.Clear();
 
             if (File.Exists(Temp + "\\apps.txt"))
@@ -957,7 +988,7 @@ namespace ADB_Debloater
                     dt.Rows.Add(new object[] { newItem, "Enabled" });
 
                 }
-
+                
                 packagecount.Text = "Packages: " + dt.Rows.Count;
             }
 
@@ -968,8 +999,8 @@ namespace ADB_Debloater
 
             dgv.DataSource = dt;
 
-            dgv.Columns["Package Name"].Width = 575;
-            dgv.Columns["Status"].Width = 79;
+            dgv.Columns["Package Name"].Width = (871 - SystemInformation.VerticalScrollBarWidth);
+            dgv.Columns["Status"].Width = 83;
 
             dgv.Columns["Package Name"].ReadOnly = true;
             dgv.Columns["Status"].ReadOnly = true;
@@ -1064,7 +1095,7 @@ namespace ADB_Debloater
                         }
                         else
                         {
-                            if (c.Name.Contains("lblConnectedStatus") || c.Name.Contains("lblQuickConnectWlDebug") || c.Name.Contains("lblDevice") || c.Name.Contains("lblSearch"))
+                            if (c.Name.Contains("lblConnectedStatus") || c.Name.Contains("lblQuickConnectWlDebug") || c.Name.Contains("lblDevice") || c.Name.Contains("lblSearch") || c.Name.Contains("btnAdbWifi"))
                             {
                                 c.Font = new Font(pfc.Families[index - 1], 11.78F, FontStyle.Bold);
                             }
@@ -1073,7 +1104,7 @@ namespace ADB_Debloater
                                 if (c.Name.Contains("lblIP") || c.Name.Contains("lblPort") || c.Name.Contains("lblPair") || c.Name.Contains("lblTheme") || c.Name.Contains("lblFont") ||
                                     c.Name.Contains("btnExport") || c.Name.Contains("btnImport") || c.Name.Contains("btnInstallAPK") || c.Name.Contains("btnReinstall") || c.Name.Contains("btnCreateScript") ||
                                     c.Name.Contains("btnCreateInstallScript") || c.Name.Contains("btnRefreshList") || c.Name.Contains("btnStdPackages") || c.Name.Contains("btnUpdtPackages") || c.Name.Contains("btnEnableDisable") ||
-                                    c.Name.Contains("btnUninstall") || c.Name.Contains("btnExportApk") || c.Name.Contains("btnLookupPkgName") || c.Name.Contains("btnCopyPkgName"))
+                                    c.Name.Contains("btnUninstall") || c.Name.Contains("btnExportApk") || c.Name.Contains("btnLookupPkgName") || c.Name.Contains("btnCopyPkgName") || c.Name.Contains("lblQuickIP") || c.Name.Contains("lblQuickPort"))
                                 {
                                     c.Font = new Font(pfc.Families[index - 1], 7.85F, FontStyle.Bold);
                                 }
@@ -1114,7 +1145,7 @@ namespace ADB_Debloater
                                 if (c.Name.Contains("lblIP") || c.Name.Contains("lblPort") || c.Name.Contains("lblPair") || c.Name.Contains("lblTheme") || c.Name.Contains("lblFont") ||
                                     c.Name.Contains("btnExport") || c.Name.Contains("btnImport") || c.Name.Contains("btnInstallAPK") || c.Name.Contains("btnReinstall") || c.Name.Contains("btnCreateScript") ||
                                     c.Name.Contains("btnCreateInstallScript") || c.Name.Contains("btnRefreshList") || c.Name.Contains("btnStdPackages") || c.Name.Contains("btnUpdtPackages") || c.Name.Contains("btnEnableDisable") ||
-                                    c.Name.Contains("btnUninstall") || c.Name.Contains("btnExportApk") || c.Name.Contains("btnLookupPkgName") || c.Name.Contains("btnCopyPkgName"))
+                                    c.Name.Contains("btnUninstall") || c.Name.Contains("btnExportApk") || c.Name.Contains("btnLookupPkgName") || c.Name.Contains("btnCopyPkgName") || c.Name.Contains("lblQuickIP") || c.Name.Contains("lblQuickPort"))
                                 {
                                     c.Font = new Font("Segoe UI", 7.85F, FontStyle.Bold);
                                 }

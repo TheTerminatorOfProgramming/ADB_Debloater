@@ -46,6 +46,7 @@ namespace ADB_Debloater
             controls.Add(lblSerialNo);
             controls.Add(lblWifi);
             controls.Add(lblWifiStatus);
+            controls.Add(lblDeviceName);
 
             functions.SetTheme(this, controls);
             GetDeviceInfo(Properties.Settings.Default.Serial);
@@ -68,7 +69,7 @@ namespace ADB_Debloater
         {
             functions.SetSerial(serial);
 
-            lblDevice.Text += " " + device; 
+            lblDeviceName.Text = device; 
 
             //Get Serial Number
             functions.NewADBCommand(" shell getprop ro.serialno", false, true);

@@ -14,6 +14,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Forms;
 
 namespace ADB_Debloater
@@ -225,38 +226,28 @@ namespace ADB_Debloater
             }
 
             Properties.Settings.Default.Save();
+
+            ArrayList controls = new ArrayList
+            {
+                lblStandard,
+                lblSWUpdate,
+                lblTheme,
+                lstStandard,
+                lstSWUpdate,
+                btnResetStandard,
+                btnResetSWUpdate,
+                btnSelectStandard,
+                btnSelectSWUpdate,
+                btnReset
+            };
+
+            functions.SetTheme(this, controls);
         }
 
         private void frmOptions_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (Properties.Settings.Default.Theme == 0)
-            {
-                NewTheme = "Auto";
-            }
-
-            if (Properties.Settings.Default.Theme == 1)
-            {
-                NewTheme = "Light";
-            }
-
-            if (Properties.Settings.Default.Theme == 2)
-            {
-                NewTheme = "Dark";
-            }
-
-            NewFont = Properties.Settings.Default.Font;
-
-            if (NewTheme != Theme || NewFont != Font)
-            {
-                if (!Properties.Settings.Default.DialogShown)
-                {
-                    MessageBox.Show("Application will now Restart following changes made.");
-                    Properties.Settings.Default.DialogShown = true;
-                    Properties.Settings.Default.Save();
-                }
-               
-                Application.Restart();
-            }
+            frmMain form = (frmMain)Application.OpenForms["frmMain"];
+            form.loadForm(false);
         }
 
         private void cmbFont_SelectedIndexChanged(object sender, EventArgs e)

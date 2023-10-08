@@ -65,13 +65,12 @@
             // 
             // pbLogo
             // 
-            this.pbLogo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbLogo.Image")));
             this.pbLogo.Location = new System.Drawing.Point(3, 3);
             this.pbLogo.Name = "pbLogo";
             this.tableLayoutPanel.SetRowSpan(this.pbLogo, 6);
             this.pbLogo.Size = new System.Drawing.Size(198, 379);
-            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogo.TabIndex = 12;
             this.pbLogo.TabStop = false;
             // 

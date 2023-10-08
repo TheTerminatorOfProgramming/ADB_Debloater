@@ -73,7 +73,7 @@
             this.lblTheme.Font = new System.Drawing.Font("Segoe UI", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTheme.Location = new System.Drawing.Point(12, 147);
             this.lblTheme.Name = "lblTheme";
-            this.lblTheme.Size = new System.Drawing.Size(46, 12);
+            this.lblTheme.Size = new System.Drawing.Size(45, 13);
             this.lblTheme.TabIndex = 23;
             this.lblTheme.Text = "Theme:";
             // 
@@ -157,7 +157,7 @@
             this.lblFont.Font = new System.Drawing.Font("Segoe UI", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFont.Location = new System.Drawing.Point(13, 221);
             this.lblFont.Name = "lblFont";
-            this.lblFont.Size = new System.Drawing.Size(33, 12);
+            this.lblFont.Size = new System.Drawing.Size(34, 13);
             this.lblFont.TabIndex = 27;
             this.lblFont.Text = "Font:";
             // 
@@ -185,8 +185,7 @@
             // 
             // frmOptions
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(917, 459);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.lblFont);

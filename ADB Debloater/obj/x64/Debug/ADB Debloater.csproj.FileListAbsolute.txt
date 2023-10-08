@@ -5,9 +5,7 @@ C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\x64\Debug\MetroF
 C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\x64\Debug\MetroFramework.Fonts.dll
 C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\x64\Debug\OSVersionExt.dll
 C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\x64\Debug\ADB Debloater.csproj.AssemblyReference.cache
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\x64\Debug\ADB Debloater.csproj.SuggestedBindingRedirects.cache
 C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\x64\Debug\ADB_Debloater.frmAbout.resources
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\x64\Debug\ADB_Debloater.frmConnectWirelessDebug.resources
 C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\x64\Debug\ADB_Debloater.frmCreateInstallScript.resources
 C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\x64\Debug\ADB_Debloater.frmCreateScript.resources
 C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\x64\Debug\ADB_Debloater.frmListConfirm.resources
@@ -23,3 +21,5 @@ C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\x64\Debug\ADB De
 C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\x64\Debug\ADB Debloater.csproj.CopyComplete
 C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\x64\Debug\ADB Debloater.exe
 C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\x64\Debug\ADB Debloater.pdb
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\x64\Debug\Windows.Forms.HintTextBox.dll
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\x64\Debug\Windows.Forms.HintTextBox.pdb

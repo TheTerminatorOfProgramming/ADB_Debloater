@@ -1,21 +1,16 @@
 ﻿using ADB_Debloater.Properties;
 using JR.Utils.GUI.Forms;
-using Microsoft.VisualBasic;
 using Microsoft.Win32;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Security.Cryptography;
 using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
+using System.Windows.Interop;
 
 namespace ADB_Debloater
 {
@@ -45,9 +40,24 @@ namespace ADB_Debloater
         public frmMain()
         {
             InitializeComponent();
+
+            txtIP.GotFocus += new System.EventHandler(this.RemoveTextIP);
+            txtIP.LostFocus += new System.EventHandler(this.AddTextIP);
+            txtPort.GotFocus += new System.EventHandler(this.RemoveTextPort);
+            txtPort.LostFocus += new System.EventHandler(this.AddTextPort);
+            txtPair.GotFocus += new System.EventHandler(this.RemoveTextPair);
+            txtPair.LostFocus += new System.EventHandler(this.AddTextPair);
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
+        {
+            loadForm(true);
+            //txtIP.HintValue = "192.168.196.365";
+            //txtPort.HintValue = "99999";
+            //txtPair.HintValue = "12345";
+        }
+
+        public void loadForm(bool searchForDevices)
         {
             functions = new clsFunctions();
 
@@ -56,8 +66,11 @@ namespace ADB_Debloater
 
             ArrayList controls = new ArrayList();
             controls.Add(dgvApps);
+            controls.Add(ssStatus);
 
             functions.SetTheme(this, controls);
+
+            //dgvApps.BackgroundColor = Color.FromArgb(56, 56, 56);
 
             SetReloadColor();
 
@@ -69,16 +82,19 @@ namespace ADB_Debloater
                     {
                         edited.Clear();
 
-                        apps.Columns.Add("Package Name", typeof(string));
-                        apps.Columns.Add("Status", typeof(string));
+                        if (apps.Columns.Count < 2)
+                        {
+                            apps.Columns.Add("Package Name", typeof(string));
+                            apps.Columns.Add("Status", typeof(string));
 
-                        dgvApps.DataSource = apps;
+                            dgvApps.DataSource = apps;
 
-                        dgvApps.Columns["Package Name"].Width = 334;
-                        dgvApps.Columns["Status"].Width = 83;
+                            dgvApps.Columns["Package Name"].Width = 871;
+                            dgvApps.Columns["Status"].Width = 83;
 
-                        dgvApps.Columns["Package Name"].ReadOnly = true;
-                        dgvApps.Columns["Status"].ReadOnly = true;
+                            dgvApps.Columns["Package Name"].ReadOnly = true;
+                            dgvApps.Columns["Status"].ReadOnly = true;
+                        }
 
                         functions.GetDevices();
 
@@ -87,40 +103,7 @@ namespace ADB_Debloater
                         FlexibleMessageBox.Show(deviceNames.Count.ToString()); //Debug Only
 #endif
 
-                        for (int i = 0; i < deviceNames.Count; i++)
-                        {
-                            if (i > 0)
-                            {
-                                if (deviceNames[i].ToString() == deviceNames[i - 1].ToString())
-                                {
-                                    FlexibleMessageBox.FONT = functions.setMessageBoxFont(Properties.Settings.Default.FontIndex);
-                                    FlexibleMessageBox.Show("Please Unplug USB Cable When in ADB Wireless\n\nDevices Connected by Multiple Methods (USB\\ADB Wifi) Will Only have the ADB Wifi Mode Added!");
-
-                                    if (!deviceSerial[i].ToString().Contains(":"))
-                                    {
-                                        deviceSerial.RemoveAt(i - 1);
-                                        deviceNames.RemoveAt(i - 1);
-
-                                        cmbDevices.Items.Add(deviceNames[i].ToString());
-                                    }
-                                    else
-                                    {
-                                        deviceSerial.RemoveAt(i);
-                                        deviceNames.RemoveAt(i);
-
-                                        cmbDevices.Items.Add(deviceNames[i - 1].ToString());
-                                    }
-                                }
-                                else
-                                {
-                                    cmbDevices.Items.Add(deviceNames[i].ToString());
-                                }
-                            }
-                            else
-                            {
-                                cmbDevices.Items.Add(deviceNames[i].ToString());
-                            }
-                        }
+                        reloadDevices();
 
                         if (cmbDevices.Items.Count > 0)
                         {
@@ -158,29 +141,144 @@ namespace ADB_Debloater
                     }
                 }
             }
-
             txtIP.Clear();
             txtPort.Clear();
+            txtPair.Clear();
 
             ArrayList ctrls = new ArrayList
             {
                 Controls,
-                pnlAPK.Controls,
-                pnlAppControls.Controls,
                 pnlDev.Controls,
-                dgvApps.Controls
+                dgvApps.Controls,
+                ssStatus.Controls
             };
 
             functions.setFont(this, Properties.Settings.Default.FontIndex, ctrls, dgvApps);
 
+            btnQuickConnectWlDebug.Font = new Font(btnQuickConnectWlDebug.Font.FontFamily, 8.25F, FontStyle.Bold);
+
+            btnAdbWifi.Font = new Font(btnAdbWifi.Font.FontFamily, 8.25F, FontStyle.Bold);
+
             if (BackColor == Color.White)
             {
                 btnReloadDevice.Image = Resources.refresh_black;
+                pnlDev.BackColor = ColorTranslator.FromHtml("#99b4d1");
             }
             else
             {
                 btnReloadDevice.Image = Resources.refresh_white;
+                pnlDev.BackColor = ColorTranslator.FromHtml("#6a5acd");
             }
+
+            if (Properties.Settings.Default.Theme == 0)
+            {
+                txtSearch.BackColor = Color.White;
+                txtSearch.ForeColor = Color.Black;
+
+                cmbSearchCriteria.BackColor = Color.White;
+                cmbSearchCriteria.ForeColor = Color.Black;
+            }
+
+            if (Properties.Settings.Default.Theme == 1)
+            {
+                txtSearch.BackColor = Color.FromArgb(56, 56, 56); ;
+                txtSearch.ForeColor = Color.White;
+
+                cmbSearchCriteria.BackColor = Color.FromArgb(56, 56, 56); ;
+                cmbSearchCriteria.ForeColor = Color.White;
+            }
+
+            if (Properties.Settings.Default.Theme == 2)
+            {
+                using (RegistryKey key1 = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Themes\Personalize"))
+                {
+                    if (key1 != null)
+                    {
+                        Object o = key1.GetValue("SystemUsesLightTheme");
+                        if (o != null)
+                        {
+                            if (o.ToString() == "0")
+                            {
+                                txtSearch.BackColor = Color.FromArgb(56, 56, 56); ;
+                                txtSearch.ForeColor = Color.White;
+
+                                cmbSearchCriteria.BackColor = Color.FromArgb(56, 56, 56); ;
+                                cmbSearchCriteria.ForeColor = Color.White;
+                            }
+                            else
+                            {
+                                txtSearch.BackColor = Color.White;
+                                txtSearch.ForeColor = Color.Black;
+
+                                cmbSearchCriteria.BackColor = Color.White;
+                                cmbSearchCriteria.ForeColor = Color.Black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public void reloadDevices()
+        {
+            cmbDevices.Items.Clear();
+            deviceNames.Clear();
+            deviceSerial.Clear();
+            apps.Clear();
+            dgvApps.Columns["Package Name"].Width = 871;
+            dgvApps.Columns["Status"].Width = 83;
+            functions.GetDevices();
+
+#if DEBUG
+            FlexibleMessageBox.FONT = functions.setMessageBoxFont(Properties.Settings.Default.FontIndex);
+            FlexibleMessageBox.Show(deviceNames.Count.ToString()); //Debug Only
+#endif
+
+            for (int i = 0; i < deviceNames.Count; i++)
+            {
+                if (i > 0)
+                {
+                    if (deviceNames[i].ToString() == deviceNames[i - 1].ToString())
+                    {
+                        FlexibleMessageBox.FONT = functions.setMessageBoxFont(Properties.Settings.Default.FontIndex);
+                        FlexibleMessageBox.Show("Please Unplug USB Cable When in ADB Wireless\n\nDevices Connected by Multiple Methods (USB\\ADB Wifi) Will Only have the ADB Wifi Mode Added!");
+
+                        if (!deviceSerial[i].ToString().Contains(":"))
+                        {
+                            deviceSerial.RemoveAt(i - 1);
+                            deviceNames.RemoveAt(i - 1);
+
+                            cmbDevices.Items.Add(deviceNames[i].ToString());
+                        }
+                        else
+                        {
+                            deviceSerial.RemoveAt(i);
+                            deviceNames.RemoveAt(i);
+
+                            cmbDevices.Items.Add(deviceNames[i - 1].ToString());
+                        }
+                    }
+                    else
+                    {
+                        cmbDevices.Items.Add(deviceNames[i].ToString());
+                    }
+                }
+                else
+                {
+                    cmbDevices.Items.Add(deviceNames[i].ToString());
+                }
+            }
+
+            if (cmbDevices.Items.Count > 0)
+            {
+                cmbDevices.SelectedIndex = 0;
+            }
+            else
+            {
+                cmbDevices.SelectedIndex = -1;
+            }
+
+            functions.CheckForDevice(deviceSerial, deviceNames);
         }
 
         private void BtnDeviceInfo_Click(object sender, EventArgs e)
@@ -233,6 +331,7 @@ namespace ADB_Debloater
                 btnUninstall.Enabled = false;
                 btnRefreshList.Enabled = false;
                 btnQuickGetIP.Enabled= false;
+                btnDeviceInfo.Enabled = false;
             }
             else
             {
@@ -253,6 +352,7 @@ namespace ADB_Debloater
                 btnUninstall.Enabled = true;
                 btnRefreshList.Enabled = true;
                 btnQuickGetIP.Enabled = true;
+                btnDeviceInfo.Enabled = true;
                 functions.GetApps(apps);
                 dgvApps.ClearSelection();
 
@@ -282,80 +382,7 @@ namespace ADB_Debloater
 
         private void BtnReloadDevice_Click(object sender, EventArgs e)
         {
-            cmbDevices.Items.Clear();
-            deviceNames.Clear();
-            deviceSerial.Clear();
-
-            functions.GetDevices();
-
-#if DEBUG
-            FlexibleMessageBox.FONT = functions.setMessageBoxFont(Properties.Settings.Default.FontIndex);
-            FlexibleMessageBox.Show(deviceNames.Count.ToString()); //Debug Only
-#endif
-
-            for (int i = 0; i < deviceNames.Count; i++)
-            {
-                if (i > 0)
-                {
-                    if (deviceNames[i].ToString() == deviceNames[i - 1].ToString())
-                    {
-                        FlexibleMessageBox.FONT = functions.setMessageBoxFont(Properties.Settings.Default.FontIndex);
-                        FlexibleMessageBox.Show("Please Unplug USB Cable When in ADB Wireless\n\nDevices Connected by Multiple Methods (USB\\ADB Wifi) Will Only have the ADB Wifi Mode Added!");
-
-                        if (!deviceSerial[i].ToString().Contains(":"))
-                        {
-                            deviceSerial.RemoveAt(i - 1);
-                            deviceNames.RemoveAt(i - 1);
-
-                            cmbDevices.Items.Add(deviceNames[i].ToString());
-                        }
-                        else
-                        {
-                            deviceSerial.RemoveAt(i);
-                            deviceNames.RemoveAt(i);
-
-                            cmbDevices.Items.Add(deviceNames[i - 1].ToString());
-                        }
-                    }
-                    else
-                    {
-                        cmbDevices.Items.Add(deviceNames[i].ToString());
-                    }
-                }
-                else
-                {
-                    cmbDevices.Items.Add(deviceNames[i].ToString());
-                }
-            }
-
-            if (cmbDevices.Items.Count > 0)
-            {
-                cmbDevices.SelectedIndex = 0;
-            }
-
-            functions.CheckForDevice(deviceSerial, deviceNames);
-        }
-
-        private void TxtSearch_TextChanged(object sender, EventArgs e)
-        {
-            apps.DefaultView.RowFilter = string.Format("[{0}] LIKE '%{1}%'", cmbSearchCriteria.Text, txtSearch.Text);
-            dgvApps.ClearSelection();
-        }
-
-        private void BtnAdbWifi_Click(object sender, EventArgs e)
-        {
-            frmConnectWirelessDebug wirelessdebug;
-            if (cmbDevices.Items.Count != 0)
-            {
-                functions.NewADBCommand(" shell ip addr show wlan0 | grep 'inet ' | cut -d' ' -f6|cut -d/ -f1", false, true);
-                ip = functions.getOutput();
-                wirelessdebug = new frmConnectWirelessDebug(ip, deviceSerial, deviceSerial[cmbDevices.SelectedIndex].ToString());
-            }
-            else
-            {
-                wirelessdebug = new frmConnectWirelessDebug();
-            }
-            wirelessdebug.ShowDialog();
+            reloadDevices();
         }
 
         private void BtnExport_Click(object sender, EventArgs e)
@@ -702,11 +729,6 @@ namespace ADB_Debloater
             dgvApps.ClearSelection();
         }
 
-        private void DgvApps_SelectionChanged(object sender, EventArgs e)
-        {
-            lblSelected.Text = "Selected: " + dgvApps.SelectedRows.Count.ToString();
-        }
-
         private DialogResult ShowInputDialog(ref string input, string title)
         {
             Size size = new Size(250, 70);
@@ -840,7 +862,7 @@ namespace ADB_Debloater
             }
             catch
             {
-                Application.Exit();
+                System.Windows.Forms.Application.Exit();
             }
         }
 
@@ -883,41 +905,54 @@ namespace ADB_Debloater
 
         private void btnQuickConnectWlDebug_Click(object sender, EventArgs e)
         {
+            string connectString = txtIP.Text + ":" + txtPort.Text;
+
             if (functions.IsValidateIP(txtIP.Text))
             {
-                string connectString = txtIP.Text + ":" + txtPort.Text;
-
-                functions.NewPairCommand(" connect " + connectString);
-
-                if (deviceSerial[cmbDevices.SelectedIndex].ToString() != "" && deviceSerial.Contains(deviceSerial[cmbDevices.SelectedIndex].ToString()))
+                if (chkPair.Checked)
                 {
-                    FlexibleMessageBox.FONT = functions.setMessageBoxFont(Properties.Settings.Default.FontIndex);
-                    FlexibleMessageBox.Show("Remove Device from USB Cable!");
-                    txtPort.Enabled = false;
+                    functions.NewPairCommand(" pair " + connectString + " " + txtPair.Text);
+                    chkPair.Checked = false;
+
+                    txtPair.Clear();
+                    txtPort.Clear();
+
                     Properties.Settings.Default.WirelessConnected = true;
                     Properties.Settings.Default.Save();
+
+                    if (functions.getOutput().Contains("successfully paired"))
+                    {
+                        txtProgress.Text = txtIP.Text + " Paired Successfully";
+                    }
                 }
-            }else
+                else
+                {
+                    functions.NewPairCommand(" connect " + connectString);
+                    if (functions.getOutput().Contains("connected to " + txtIP.Text))
+                    {
+                        txtProgress.Text = txtIP.Text + " Connected Successfully";
+                    }
+                    if (cmbDevices.SelectedIndex > -1)
+                    {
+                        if (deviceSerial[cmbDevices.SelectedIndex].ToString() != "" && deviceSerial.Contains(deviceSerial[cmbDevices.SelectedIndex].ToString()))
+                        {
+                            FlexibleMessageBox.FONT = functions.setMessageBoxFont(Properties.Settings.Default.FontIndex);
+                            FlexibleMessageBox.Show("Remove Device from USB Cable!");
+                            Properties.Settings.Default.WirelessConnected = true;
+                            Properties.Settings.Default.Save();
+                        }
+                    }
+                }
+                reloadDevices();
+            }
+            else
             {
                 FlexibleMessageBox.FONT = functions.setMessageBoxFont(Properties.Settings.Default.FontIndex);
                 FlexibleMessageBox.Show("IP Address Not Valid");
                 txtIP.Clear();
             }
-        }
+        } 
 
-        private void txtIP_Leave(object sender, EventArgs e)
-        {
-            /*Regex regex = new Regex(@"\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b");
-            Match match = regex.Match(txtIP.Text);
-            if (match.Success == false)
-            {
-                txtIP.Text = approvedethernetip;
-            }
-            else
-            {
-                approvedethernetip = txtIP.Text;
-            }*/
-        }
         private void btnInstallAPK_DragEnter(object sender, DragEventArgs e)
         {
             if (!e.Data.GetDataPresent(DataFormats.FileDrop)) return;
@@ -982,12 +1017,12 @@ namespace ADB_Debloater
         private void btnQuickGetIP_Click(object sender, EventArgs e)
         {
             functions.NewADBCommand(" shell ip addr show wlan0 | grep 'inet ' | cut -d' ' -f6|cut -d/ -f1", false, true);
-            txtIP .Text = functions.getOutput();
-
-            txtIP.Enabled = false;
+            txtIP.Value = functions.getOutput();
+            //txtIP.Enabled = false;
+            txtIP.Enabled = true;
         }
 
-        private void txtIP_KeyPress(object sender, KeyPressEventArgs e)
+        private void cmbIP_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
@@ -999,6 +1034,65 @@ namespace ADB_Debloater
         {
             frmCreateInstallScript createScript = new frmCreateInstallScript(cmbDevices.SelectedItem.ToString());
             createScript.ShowDialog();
+        }
+
+        private void chkPair_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkPair.Checked)
+            {
+                txtPair.Enabled = true;
+                btnQuickConnectWlDebug.Text = "Pair";
+            }
+
+            if (!chkPair.Checked)
+            {
+                txtPair.Enabled = false;
+                btnQuickConnectWlDebug.Text = "Connect";
+            }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            apps.DefaultView.RowFilter = string.Format("[{0}] LIKE '%{1}%'", cmbSearchCriteria.Text, txtSearch.Text);
+            dgvApps.ClearSelection();
+        }
+
+        private void dgvApps_SelectionChanged(object sender, EventArgs e)
+        {
+            lblSelected.Text = "Selected: " + dgvApps.SelectedRows.Count.ToString();
+        }
+
+        public void RemoveTextIP(object sender, EventArgs e)
+        {
+            txtIP.Text = "";
+        }
+
+        public void AddTextIP(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(txtIP.Text))
+                txtIP.Text = "Enter IP Address";
+        }
+
+        public void RemoveTextPort(object sender, EventArgs e)
+        {
+            txtPort.Text = "";
+        }
+
+        public void AddTextPort(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(txtPort.Text))
+                txtPort.Text = "Enter Port Number";
+        }
+
+        public void RemoveTextPair(object sender, EventArgs e)
+        {
+            txtPair.Text = "";
+        }
+
+        public void AddTextPair(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(txtPair.Text))
+                txtPair.Text = "Enter Pairing Code";
         }
     }
 }
