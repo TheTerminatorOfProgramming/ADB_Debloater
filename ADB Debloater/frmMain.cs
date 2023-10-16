@@ -951,67 +951,6 @@ namespace ADB_Debloater
                 FlexibleMessageBox.Show("IP Address Not Valid");
                 txtIP.Clear();
             }
-        } 
-
-        private void btnInstallAPK_DragEnter(object sender, DragEventArgs e)
-        {
-            if (!e.Data.GetDataPresent(DataFormats.FileDrop)) return;
-            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
-            foreach (var file in files)
-            {
-                var ext = Path.GetExtension(file);
-                if (ext.Equals(".apk", StringComparison.CurrentCultureIgnoreCase))
-                {
-                    e.Effect = DragDropEffects.Copy;
-                    return;
-                }
-            }
-        }
-
-        private void btnInstallAPK_DragDrop(object sender, DragEventArgs e)
-        {
-            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
-            foreach (var file in files)
-            {
-                var ext = Path.GetExtension(file);
-                var path = Path.GetFullPath(file);
-                if (ext.Equals(".apk", StringComparison.CurrentCultureIgnoreCase)) {
-                    functions.InstallAPK(path);
-                    functions.GetApps(apps);
-                    dgvApps.ClearSelection();
-                }
-            }
-        }
-
-        private void btnCreateScript_DragEnter(object sender, DragEventArgs e)
-        {
-            if (!e.Data.GetDataPresent(DataFormats.FileDrop)) return;
-            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
-            foreach (var file in files)
-            {
-                var ext = Path.GetExtension(file);
-                if (ext.Equals(".acfg", StringComparison.CurrentCultureIgnoreCase))
-                {
-                    e.Effect = DragDropEffects.Copy;
-                    return;
-                }
-            }
-        }
-
-        private void btnCreateScript_DragDrop(object sender, DragEventArgs e)
-        {
-            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
-            foreach (var file in files)
-            {
-                var ext = Path.GetExtension(file);
-                var path = Path.GetFullPath(file);
-                var directory = Path.GetDirectoryName(file);
-                if (ext.Equals(".acfg", StringComparison.CurrentCultureIgnoreCase))
-                {
-                    frmCreateScript createScript = new frmCreateScript(path, directory);
-                    createScript.ShowDialog();
-                }
-            }
         }
 
         private void btnQuickGetIP_Click(object sender, EventArgs e)
@@ -1093,6 +1032,68 @@ namespace ADB_Debloater
         {
             if (String.IsNullOrWhiteSpace(txtPair.Text))
                 txtPair.Text = "Enter Pairing Code";
+        }
+
+        private void btnInstallAPK_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+            foreach (var file in files)
+            {
+                var ext = Path.GetExtension(file);
+                var path = Path.GetFullPath(file);
+                if (ext.Equals(".apk", StringComparison.CurrentCultureIgnoreCase))
+                {
+                    functions.InstallAPK(path);
+                    functions.GetApps(apps);
+                    dgvApps.ClearSelection();
+                }
+            }
+        }
+
+        private void btnCreateScript_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+            foreach (var file in files)
+            {
+                var ext = Path.GetExtension(file);
+                var path = Path.GetFullPath(file);
+                var directory = Path.GetDirectoryName(file);
+                if (ext.Equals(".acfg", StringComparison.CurrentCultureIgnoreCase))
+                {
+                    frmCreateScript createScript = new frmCreateScript(path, directory);
+                    createScript.ShowDialog();
+                }
+            }
+        }
+
+        private void btnInstallAPK_DragEnter(object sender, DragEventArgs e)
+        {
+            if (!e.Data.GetDataPresent(DataFormats.FileDrop)) return;
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+            foreach (var file in files)
+            {
+                var ext = Path.GetExtension(file);
+                if (ext.Equals(".apk", StringComparison.CurrentCultureIgnoreCase))
+                {
+                    e.Effect = DragDropEffects.Copy;
+                    return;
+                }
+            }
+        }
+
+        private void btnCreateScript_DragEnter(object sender, DragEventArgs e)
+        {
+            if (!e.Data.GetDataPresent(DataFormats.FileDrop)) return;
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+            foreach (var file in files)
+            {
+                var ext = Path.GetExtension(file);
+                if (ext.Equals(".acfg", StringComparison.CurrentCultureIgnoreCase))
+                {
+                    e.Effect = DragDropEffects.Copy;
+                    return;
+                }
+            }
         }
     }
 }

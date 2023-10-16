@@ -69,28 +69,3 @@ C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\obj\Release\ADB Debloater.csp
 C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\obj\Release\ADB Debloater.csproj.CopyComplete
 C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\obj\Release\ADB Debloater.exe
 C:\Users\Jesse\Desktop\ADB Debloater\ADB Debloater\obj\Release\ADB Debloater.pdb
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Release\ADB Debloater.exe.config
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Release\ADB Debloater.exe
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Release\ADB Debloater.pdb
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Release\MetroFramework.dll
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Release\MetroFramework.Fonts.dll
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Release\OSVersionExt.dll
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Release\ADB Debloater.csproj.AssemblyReference.cache
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Release\ADB_Debloater.frmAbout.resources
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Release\ADB_Debloater.frmCreateInstallScript.resources
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Release\ADB_Debloater.frmCreateScript.resources
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Release\ADB_Debloater.frmListConfirm.resources
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Release\ADB_Debloater.frmMain.resources
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Release\ADB_Debloater.frmOptions.resources
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Release\ADB_Debloater.frmDeviceInfo.resources
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Release\ADB_Debloater.frmRestartManager.resources
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Release\ADB_Debloater.frmSelectPackages.resources
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Release\ADB_Debloater.frmStorage.resources
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Release\ADB_Debloater.Properties.Resources.resources
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Release\ADB Debloater.csproj.GenerateResource.cache
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Release\ADB Debloater.csproj.CoreCompileInputs.cache
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Release\ADB Debloater.csproj.CopyComplete
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Release\ADB Debloater.exe
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Release\ADB Debloater.pdb
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Release\Windows.Forms.HintTextBox.dll
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\bin\Release\Windows.Forms.HintTextBox.pdb
