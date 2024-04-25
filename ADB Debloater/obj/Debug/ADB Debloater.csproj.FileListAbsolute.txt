@@ -91,6 +91,6 @@ C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Debug\ADB_Debloa
 C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Debug\ADB_Debloater.Properties.Resources.resources
 C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Debug\ADB Debloater.csproj.GenerateResource.cache
 C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Debug\ADB Debloater.csproj.CoreCompileInputs.cache
-C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Debug\ADB Debloater.csproj.CopyComplete
 C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Debug\ADB Debloater.exe
 C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Debug\ADB Debloater.pdb
+C:\Users\Jesse\Documents\GitHub\ADB_Debloater\ADB Debloater\obj\Debug\ADB Debl.896C0CCB.Up2Date

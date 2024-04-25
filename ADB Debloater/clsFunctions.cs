@@ -855,9 +855,14 @@ namespace ADB_Debloater
         public void InstallAPK(string file)
         {
             string fileName = Path.GetFileNameWithoutExtension(file);
-            NewADBCommand(" install  " + (char)34 + file + (char)34, false, false);
-
-            //NewADBCommand(" shell pm list packages com.ttop.eachelper", false, false);
+            if (Properties.Settings.Default.Android14Override)
+            {
+                NewADBCommand(" install --bypass-low-target-sdk-block " + (char)34 + file + (char)34, false, false);
+            }
+            else
+            {
+                NewADBCommand(" install  " + (char)34 + file + (char)34, false, false);
+            }
 
             string appInstalled = getOutput();
             if (appInstalled.Contains("Success"))
@@ -1104,7 +1109,7 @@ namespace ADB_Debloater
                                 if (c.Name.Contains("lblIP") || c.Name.Contains("lblPort") || c.Name.Contains("lblPair") || c.Name.Contains("lblTheme") || c.Name.Contains("lblFont") ||
                                     c.Name.Contains("btnExport") || c.Name.Contains("btnImport") || c.Name.Contains("btnInstallAPK") || c.Name.Contains("btnReinstall") || c.Name.Contains("btnCreateScript") ||
                                     c.Name.Contains("btnCreateInstallScript") || c.Name.Contains("btnRefreshList") || c.Name.Contains("btnStdPackages") || c.Name.Contains("btnUpdtPackages") || c.Name.Contains("btnEnableDisable") ||
-                                    c.Name.Contains("btnUninstall") || c.Name.Contains("btnExportApk") || c.Name.Contains("btnLookupPkgName") || c.Name.Contains("btnCopyPkgName") || c.Name.Contains("lblQuickIP") || c.Name.Contains("lblQuickPort"))
+                                    c.Name.Contains("btnUninstall") || c.Name.Contains("btnExportApk") || c.Name.Contains("btnLookupPkgName") || c.Name.Contains("btnCopyPkgName") || c.Name.Contains("lblQuickIP") || c.Name.Contains("lblQuickPort") || c.Name.Contains("chkAndroidOverride"))
                                 {
                                     c.Font = new Font(pfc.Families[index - 1], 7.85F, FontStyle.Bold);
                                 }
@@ -1145,7 +1150,7 @@ namespace ADB_Debloater
                                 if (c.Name.Contains("lblIP") || c.Name.Contains("lblPort") || c.Name.Contains("lblPair") || c.Name.Contains("lblTheme") || c.Name.Contains("lblFont") ||
                                     c.Name.Contains("btnExport") || c.Name.Contains("btnImport") || c.Name.Contains("btnInstallAPK") || c.Name.Contains("btnReinstall") || c.Name.Contains("btnCreateScript") ||
                                     c.Name.Contains("btnCreateInstallScript") || c.Name.Contains("btnRefreshList") || c.Name.Contains("btnStdPackages") || c.Name.Contains("btnUpdtPackages") || c.Name.Contains("btnEnableDisable") ||
-                                    c.Name.Contains("btnUninstall") || c.Name.Contains("btnExportApk") || c.Name.Contains("btnLookupPkgName") || c.Name.Contains("btnCopyPkgName") || c.Name.Contains("lblQuickIP") || c.Name.Contains("lblQuickPort"))
+                                    c.Name.Contains("btnUninstall") || c.Name.Contains("btnExportApk") || c.Name.Contains("btnLookupPkgName") || c.Name.Contains("btnCopyPkgName") || c.Name.Contains("lblQuickIP") || c.Name.Contains("lblQuickPort") || c.Name.Contains("chkAndroidOverride"))
                                 {
                                     c.Font = new Font("Segoe UI", 7.85F, FontStyle.Bold);
                                 }

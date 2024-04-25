@@ -31,8 +31,8 @@ namespace ADB_Debloater
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.ssStatus = new System.Windows.Forms.StatusStrip();
             this.lblPackageCount = new System.Windows.Forms.ToolStripStatusLabel();
@@ -75,6 +75,7 @@ namespace ADB_Debloater
             this.btnReloadDevice = new System.Windows.Forms.Button();
             this.lblConnectedStatus = new System.Windows.Forms.Label();
             this.btnAdbWifi = new System.Windows.Forms.Button();
+            this.chkAndroidOverride = new System.Windows.Forms.CheckBox();
             this.ssStatus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvApps)).BeginInit();
             this.pnlDev.SuspendLayout();
@@ -105,7 +106,7 @@ namespace ADB_Debloater
             // lblSelected
             // 
             this.lblSelected.Name = "lblSelected";
-            this.lblSelected.Size = new System.Drawing.Size(63, 18);
+            this.lblSelected.Size = new System.Drawing.Size(64, 18);
             this.lblSelected.Text = "Selected: 0";
             // 
             // toolStripSeparator1
@@ -116,7 +117,7 @@ namespace ADB_Debloater
             // lblSearch
             // 
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(45, 21);
+            this.lblSearch.Size = new System.Drawing.Size(42, 21);
             this.lblSearch.Text = "Search:";
             // 
             // txtSearch
@@ -152,14 +153,14 @@ namespace ADB_Debloater
             this.dgvApps.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvApps.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvApps.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 7.854546F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvApps.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 7.854546F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvApps.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvApps.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvApps.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvApps.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
@@ -168,14 +169,14 @@ namespace ADB_Debloater
             this.dgvApps.Name = "dgvApps";
             this.dgvApps.ReadOnly = true;
             this.dgvApps.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 7.854546F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvApps.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 7.854546F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvApps.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvApps.RowHeadersVisible = false;
             this.dgvApps.RowHeadersWidth = 47;
             this.dgvApps.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
@@ -192,6 +193,7 @@ namespace ADB_Debloater
             // pnlDev
             // 
             this.pnlDev.BackColor = System.Drawing.Color.SlateBlue;
+            this.pnlDev.Controls.Add(this.chkAndroidOverride);
             this.pnlDev.Controls.Add(this.txtPair);
             this.pnlDev.Controls.Add(this.txtPort);
             this.pnlDev.Controls.Add(this.txtIP);
@@ -281,7 +283,7 @@ namespace ADB_Debloater
             this.chkPair.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.chkPair.Location = new System.Drawing.Point(517, 265);
             this.chkPair.Name = "chkPair";
-            this.chkPair.Size = new System.Drawing.Size(47, 19);
+            this.chkPair.Size = new System.Drawing.Size(47, 16);
             this.chkPair.TabIndex = 74;
             this.chkPair.Text = "Pair";
             this.chkPair.UseVisualStyleBackColor = true;
@@ -293,7 +295,7 @@ namespace ADB_Debloater
             this.lblPairCode.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPairCode.Location = new System.Drawing.Point(460, 289);
             this.lblPairCode.Name = "lblPairCode";
-            this.lblPairCode.Size = new System.Drawing.Size(76, 15);
+            this.lblPairCode.Size = new System.Drawing.Size(82, 12);
             this.lblPairCode.TabIndex = 73;
             this.lblPairCode.Text = "Pairing Code";
             // 
@@ -506,7 +508,7 @@ namespace ADB_Debloater
             this.lblQuickPort.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuickPort.Location = new System.Drawing.Point(416, 289);
             this.lblQuickPort.Name = "lblQuickPort";
-            this.lblQuickPort.Size = new System.Drawing.Size(31, 15);
+            this.lblQuickPort.Size = new System.Drawing.Size(29, 12);
             this.lblQuickPort.TabIndex = 59;
             this.lblQuickPort.Text = "Port";
             // 
@@ -558,7 +560,7 @@ namespace ADB_Debloater
             this.lblQuickConnectWlDebug.Font = new System.Drawing.Font("Segoe UI", 11.78182F, System.Drawing.FontStyle.Bold);
             this.lblQuickConnectWlDebug.Location = new System.Drawing.Point(301, 233);
             this.lblQuickConnectWlDebug.Name = "lblQuickConnectWlDebug";
-            this.lblQuickConnectWlDebug.Size = new System.Drawing.Size(196, 21);
+            this.lblQuickConnectWlDebug.Size = new System.Drawing.Size(193, 16);
             this.lblQuickConnectWlDebug.TabIndex = 52;
             this.lblQuickConnectWlDebug.Text = "Wireless Debug Connect";
             // 
@@ -615,7 +617,7 @@ namespace ADB_Debloater
             this.cmbDevices.FormattingEnabled = true;
             this.cmbDevices.Location = new System.Drawing.Point(49, 261);
             this.cmbDevices.Name = "cmbDevices";
-            this.cmbDevices.Size = new System.Drawing.Size(224, 25);
+            this.cmbDevices.Size = new System.Drawing.Size(224, 21);
             this.cmbDevices.Sorted = true;
             this.cmbDevices.TabIndex = 47;
             this.cmbDevices.SelectedIndexChanged += new System.EventHandler(this.CmbDevices_SelectedIndexChanged);
@@ -639,7 +641,7 @@ namespace ADB_Debloater
             this.lblConnectedStatus.Font = new System.Drawing.Font("Segoe UI", 11.78182F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConnectedStatus.Location = new System.Drawing.Point(45, 233);
             this.lblConnectedStatus.Name = "lblConnectedStatus";
-            this.lblConnectedStatus.Size = new System.Drawing.Size(175, 21);
+            this.lblConnectedStatus.Size = new System.Drawing.Size(169, 16);
             this.lblConnectedStatus.TabIndex = 45;
             this.lblConnectedStatus.Text = "No Device Connected";
             // 
@@ -657,6 +659,19 @@ namespace ADB_Debloater
             this.btnAdbWifi.TabStop = false;
             this.btnAdbWifi.Text = "Wireless Debug";
             this.btnAdbWifi.UseVisualStyleBackColor = false;
+            // 
+            // chkAndroidOverride
+            // 
+            this.chkAndroidOverride.AutoSize = true;
+            this.chkAndroidOverride.Enabled = false;
+            this.chkAndroidOverride.Font = new System.Drawing.Font("Segoe UI", 7.854546F, System.Drawing.FontStyle.Bold);
+            this.chkAndroidOverride.Location = new System.Drawing.Point(328, 192);
+            this.chkAndroidOverride.Name = "chkAndroidOverride";
+            this.chkAndroidOverride.Size = new System.Drawing.Size(129, 15);
+            this.chkAndroidOverride.TabIndex = 79;
+            this.chkAndroidOverride.Text = "Android 14 Bypass";
+            this.chkAndroidOverride.UseVisualStyleBackColor = true;
+            this.chkAndroidOverride.CheckedChanged += new System.EventHandler(this.chkAndroidOverride_CheckedChanged);
             // 
             // frmMain
             // 
@@ -728,6 +743,7 @@ namespace ADB_Debloater
         private Windows.Forms.HintTextBox txtPort;
         private Windows.Forms.HintTextBox txtIP;
         private System.Windows.Forms.ToolStripStatusLabel txtProgress;
+        private System.Windows.Forms.CheckBox chkAndroidOverride;
     }
 }
 

@@ -332,6 +332,7 @@ namespace ADB_Debloater
                 btnRefreshList.Enabled = false;
                 btnQuickGetIP.Enabled= false;
                 btnDeviceInfo.Enabled = false;
+                chkAndroidOverride.Enabled = false;
             }
             else
             {
@@ -353,6 +354,7 @@ namespace ADB_Debloater
                 btnRefreshList.Enabled = true;
                 btnQuickGetIP.Enabled = true;
                 btnDeviceInfo.Enabled = true;
+                chkAndroidOverride.Enabled = true;
                 functions.GetApps(apps);
                 dgvApps.ClearSelection();
 
@@ -1094,6 +1096,12 @@ namespace ADB_Debloater
                     return;
                 }
             }
+        }
+
+        private void chkAndroidOverride_CheckedChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Android14Override = chkAndroidOverride.Checked;
+            Properties.Settings.Default.Save();
         }
     }
 }
